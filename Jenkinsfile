@@ -8,7 +8,7 @@ pipeline {
     }
     triggers { pollSCM('* * * * *') }
     environment {
-        IMAGE = 'sarsembayev-eldar-student-api:v1.0-sarsembayev-eldar-37006'
+        IMAGE = 'sarsembayev-eldar-student-api:v1.0.1-sarsembayev-eldar-37006'
     }
     stages {
         stage('Checkout') {

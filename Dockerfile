@@ -4,7 +4,7 @@ COPY gradlew gradlew.bat build.gradle settings.gradle gradle.properties ./
 COPY gradle ./gradle
 RUN chmod +x gradlew
 COPY src ./src
-RUN ./gradlew --no-daemon clean test bootJar
+RUN --mount=type=cache,id=midterm-gradle,target=/root/.gradle ./gradlew --no-daemon clean test bootJar
 
 FROM eclipse-temurin:21-jre-jammy
 WORKDIR /app
