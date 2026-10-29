@@ -16,9 +16,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class ControlledPipelineTests {
     @Autowired MockMvc mvc;
     @Test void invalidEmailIsRejected() throws Exception {
-        // Deliberately wrong expectation for the isolated troubleshooting demonstration.
+        // Correct expectation: invalid input must be rejected before a student is created.
         mvc.perform(post(StudentController.BASE_PATH).contentType(MediaType.APPLICATION_JSON)
             .content("{\"firstName\":\"Eldar\",\"lastName\":\"Sarsembayev\",\"email\":\"invalid\",\"groupName\":\"IT2-2301\"}"))
-            .andExpect(status().isCreated());
+            .andExpect(status().isBadRequest());
     }
 }
