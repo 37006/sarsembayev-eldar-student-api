@@ -1,0 +1,16 @@
+.gradle/
+build/
+.env
+.env.*
+!.env.example
+logs/*
+!logs/.gitkeep
+backups/*
+!backups/.gitkeep
+*.log
+*.pid
+*.hprof
+.idea/
+*.iml
+.vscode/
+__pycache__/

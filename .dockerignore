@@ -1,0 +1,9 @@
+.git
+.gradle
+build
+.env*
+logs
+backups
+evidence
+docs
+*.zip

@@ -1,0 +1,40 @@
+name: sarsembayev-eldar-student-api
+services:
+  app:
+    build: .
+    image: sarsembayev-eldar-student-api:${IMAGE_TAG:-v1.0-sarsembayev-eldar-37006}
+    container_name: sarsembayev-eldar-student-api-app
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${APP_PORT:-8083}:8080"
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/${POSTGRES_DB:-student_api}
+      DB_USER: ${POSTGRES_USER:-student_api}
+      DB_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - student-network
+  db:
+    image: postgres:17-alpine
+    container_name: sarsembayev-eldar-student-api-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-student_api}
+      POSTGRES_USER: ${POSTGRES_USER:-student_api}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - student-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    networks:
+      - student-network
+volumes:
+  student-data:
+networks:
+  student-network:
+    driver: bridge
