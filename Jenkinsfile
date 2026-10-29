@@ -3,7 +3,6 @@ pipeline {
     options {
         skipDefaultCheckout(true)
         disableConcurrentBuilds()
-        timestamps()
         timeout(time: 20, unit: 'MINUTES')
         buildDiscarder(logRotator(numToKeepStr: '15'))
     }
@@ -23,7 +22,7 @@ pipeline {
         }
         stage('Test') {
             steps { sh './gradlew --no-daemon test' }
-            post { always { junit allowEmptyResults: false, testResults: 'build/test-results/test/*.xml' } }
+            post { always { archiveArtifacts allowEmptyArchive: true, artifacts: 'build/test-results/test/*.xml' } }
         }
         stage('Docker Build') {
             steps { sh 'docker build -t "$IMAGE" .' }
