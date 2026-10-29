@@ -2,7 +2,7 @@
 
 Eldar Sarsembayev | IT2-2301 | Student ID 37006 | DevOps Midterm
 
-Project status: initial CRUD application.
+Project status: API usage documented by Eldar Sarsembayev.
 
 This project manages student records through a Spring Boot REST API and stores them in PostgreSQL. It is a separate project from my earlier Python laboratory work.
 
