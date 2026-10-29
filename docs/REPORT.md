@@ -2,6 +2,8 @@
 
 Eldar Sarsembayev | IT2-2301 | Student ID 37006
 
+Work in progress: Linux, the local Git workflow, Docker and PostgreSQL checks are complete. GitHub publication and Jenkins execution still require access confirmation. Jenkins rows below describe the prepared configuration until real build results are recorded.
+
 ## Application and environment
 
 I implemented a student register with Spring Boot 3.5.16, Java 21 and Gradle 8.14.3. PostgreSQL 17 stores the records in a named Docker volume. The personal endpoint is `http://127.0.0.1:8083/api/sarsembayev-eldar/students`.
@@ -69,7 +71,7 @@ Submit the personal GitHub repository URL and the final project archive containi
 
 Repository: https://github.com/37006/sarsembayev-eldar-student-api
 
-Source revision when this report was generated: `8001a6616cb7ffb85305a96563ef490528c22165`. A later documentation-only commit may contain this report and the evidence itself.
+Source revision when this report was generated: `ae10b6d3283418e6e172c4ab6880934e8a9eee4d`. A later documentation-only commit may contain this report and the evidence itself.
 
 ## References
 
