@@ -4,7 +4,7 @@ Eldar Sarsembayev | IT2-2301 | Student ID 37006 | DevOps Midterm
 
 Project status: CRUD implemented and API usage documented by Eldar Sarsembayev.
 
-This project manages student records through a Spring Boot REST API and stores them in PostgreSQL. It is a separate project from my earlier Python laboratory work.
+This project manages student records through a Spring Boot REST API and stores them in PostgreSQL.
 
 ## Requirements
 
@@ -55,13 +55,11 @@ The CRUD feature includes automated checks for successful updates, missing IDs, 
 - `docs/REPORT.md`: requirement-by-requirement results and evidence references.
 - `evidence/`: real command transcripts, API responses and Jenkins records.
 
-No separate PDF report or mandatory video is specified in this Midterm task. The code, GitHub history and actual demonstrations are the primary results.
-
 ## Automatic CI verification
 
 The Jenkins job `Sarsembayev_Eldar_Student_API` checks GitHub once per minute using Poll SCM. After a commit reaches main, Jenkins checks out that revision and runs all five stages. The build cause distinguishes an SCM-triggered run from a manual Build Now run. The PostgreSQL smoke check also verifies case-insensitive email uniqueness and rollback when an update would reuse another student's email.
 
-## Reviewed release 1.0.2
+## Release 1.0.2
 
 The full suite now contains 31 tests. The review fixed scalar-to-string conversion, empty values created by Unicode whitespace trimming, and misleading duplicate-email errors. Normalization now happens before validation. The live regression command is `python3 scripts/review_api_check.py`; it also checks concurrent uniqueness against PostgreSQL. These checks remain enabled when Python runs with `-O`.
 

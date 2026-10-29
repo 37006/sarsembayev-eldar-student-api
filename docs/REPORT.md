@@ -2,15 +2,13 @@
 
 Eldar Sarsembayev | IT2-2301 | Student ID 37006
 
-All required local and Jenkins demonstrations have recorded results.
-
 ## Application and environment
 
 I implemented a student register with Spring Boot 3.5.16, Java 21 and Gradle 8.14.3. PostgreSQL 17 stores the records in a named Docker volume. The personal endpoint is `http://127.0.0.1:8083/api/sarsembayev-eldar/students`.
 
 The application has a controller, a transactional service and a JPA repository. The database generates numeric IDs and enforces unique emails. Request validation rejects incomplete or malformed records. The responses are 201 for creation, 200 for retrieval and update, 204 for deletion, 400 for invalid input, 404 for a missing student and 409 for a duplicate email. The home endpoint identifies the student, group, ID and application version.
 
-The project is separate from my previous Python laboratory. The local environment is the restored Ubuntu WSL distribution `DevOps-Backup-20261011`; Docker Engine and Jenkins run inside it. I installed the missing Java compiler before building this project. No result from the earlier Python application is presented as a Midterm test.
+The application was built and tested in Ubuntu 24.04 under WSL 2, distribution `DevOps-Backup-20261011`, with Java 21 JDK, Docker Engine and Jenkins.
 
 ## Requirement checklist
 
@@ -33,7 +31,7 @@ The project is separate from my previous Python laboratory. The local environmen
 | 4.3 | Successful baseline, isolated failing test expectation, correction and successful rerun | Build #1: SUCCESS; Build #1: FAILURE; Build #2: SUCCESS |
 | 4.4 | SCM polling, a new GitHub commit and an automatically triggered successful build | Build #2: SUCCESS; polling/build cause records |
 
-Evidence filenames in the table are relative to `evidence/`. The final status of external tasks must be checked against the actual remote and Jenkins records, not inferred from the presence of configuration files.
+Evidence filenames in the table are relative to `evidence/`. The directory contains command transcripts, HTTP responses, test results and Jenkins build records.
 
 ## Verified application results
 
@@ -83,13 +81,11 @@ Current review evidence is in `evidence/review/`: `input-before.jsonl`, `regress
 - CI integrates, builds and tests changes. Continuous Delivery keeps verified changes ready for release with approval; Continuous Deployment releases them automatically. This task requires CI and image verification, not automated deployment.
 - Jenkins checks out the source using Git, builds the Java application with its wrapper, runs tests, builds the personal image and verifies that the image exists. A nonzero Gradle result fails the stage and skips subsequent stages.
 
-## Submission
+## Project materials
 
-Submit the personal GitHub repository URL and the final project archive containing source, Gradle wrapper, Git history, report, personal system log, README backup and real evidence. The supplied Midterm does not explicitly require a separate PDF report or a video. The instructor may ask for a live terminal or Jenkins demonstration.
+The project contains the application source, Gradle wrapper, Git history, this report, the personal system log, the README backup and execution evidence.
 
 Repository: https://github.com/37006/sarsembayev-eldar-student-api
-
-Source revision when this report was generated: `ac710bbb870fd6de694971bac7eb223b618c589c`. A later documentation-only commit may contain this report and the evidence itself.
 
 ## References
 

@@ -4,7 +4,7 @@ Eldar Sarsembayev, IT2-2301, 37006.
 
 ## Local Linux environment
 
-The demonstrated environment is Ubuntu 24.04 in WSL 2, distribution `DevOps-Backup-20261011`. The new project is `/home/eldar/devops/sarsembayev-eldar-student-api`. The earlier Python project is separate. Docker Engine runs inside Linux; Docker Desktop is not needed for this setup.
+Environment: Ubuntu 24.04 in WSL 2, distribution `DevOps-Backup-20261011`. Project directory: `/home/eldar/devops/sarsembayev-eldar-student-api`. Docker Engine runs inside Linux.
 
 ```powershell
 wsl -d DevOps-Backup-20261011 -u eldar
@@ -74,4 +74,4 @@ git status --short
 git check-ignore .env logs/Sarsembayev_Eldar_system_report.log backups/Sarsembayev_Eldar_README_backup.md
 ```
 
-The conflict evidence records both competing README lines before resolution and the final merge commit. It must be interpreted as an actual completed Git operation, not instructions to create another conflict when starting the application.
+`evidence/git-workflow.txt` records the two conflicting README lines, their resolution and the resulting merge commit.
