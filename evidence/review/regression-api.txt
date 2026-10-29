@@ -1,0 +1,24 @@
+POST /api/sarsembayev-eldar/students -> 400
+{"type":"about:blank","title":"Bad Request","status":400,"detail":"The request contains malformed JSON, an invalid field type or an invalid student ID","instance":"/api/sarsembayev-eldar/students"}
+POST /api/sarsembayev-eldar/students -> 400
+{"type":"about:blank","title":"Bad Request","status":400,"detail":"The request contains malformed JSON, an invalid field type or an invalid student ID","instance":"/api/sarsembayev-eldar/students"}
+POST /api/sarsembayev-eldar/students -> 400
+{"type":"about:blank","title":"Bad Request","status":400,"detail":"The request contains malformed JSON, an invalid field type or an invalid student ID","instance":"/api/sarsembayev-eldar/students"}
+POST /api/sarsembayev-eldar/students -> 400
+{"type":"about:blank","title":"Bad Request","status":400,"detail":"Check the student fields","instance":"/api/sarsembayev-eldar/students","errors":{"firstName":"must not be blank"}}
+POST /api/sarsembayev-eldar/students -> 400
+{"type":"about:blank","title":"Bad Request","status":400,"detail":"Check the student fields","instance":"/api/sarsembayev-eldar/students","errors":{"firstName":"must not be blank"}}
+POST /api/sarsembayev-eldar/students -> 400
+{"type":"about:blank","title":"Bad Request","status":400,"detail":"Check the student fields","instance":"/api/sarsembayev-eldar/students","errors":{"email":"size must be between 0 and 254"}}
+POST /api/sarsembayev-eldar/students -> 201
+{"id":21,"firstName":"Eldar","lastName":"Sarsembayev","email":"review.734043e87fd240d7a31f1b2d4b1f7176@example.com","groupName":"IT2-2301"}
+PUT /api/sarsembayev-eldar/students/21 -> 400
+{"type":"about:blank","title":"Bad Request","status":400,"detail":"Check the student fields","instance":"/api/sarsembayev-eldar/students/21","errors":{"firstName":"must not be blank"}}
+GET /api/sarsembayev-eldar/students/21 -> 200
+{"id":21,"firstName":"Eldar","lastName":"Sarsembayev","email":"review.734043e87fd240d7a31f1b2d4b1f7176@example.com","groupName":"IT2-2301"}
+DELETE /api/sarsembayev-eldar/students/21 -> 204
+
+Concurrent duplicate-email responses: [201, 409, 409, 409]
+DELETE /api/sarsembayev-eldar/students/22 -> 204
+
+PASS: strict JSON types, Unicode normalization, safe updates and concurrent PostgreSQL uniqueness

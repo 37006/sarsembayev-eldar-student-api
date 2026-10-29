@@ -1,0 +1,4 @@
+{"case": "numeric firstName", "status": 201, "result": {"id": 15, "firstName": "123", "lastName": "Sarsembayev", "email": "review.cd02509a0e974e01bd5457f50e457beb@example.com", "groupName": "IT2-2301"}}
+{"case": "Unicode whitespace name", "status": 201, "result": {"id": 16, "firstName": "", "lastName": "Sarsembayev", "email": "review.cd02509a0e974e01bd5457f50e457beb@example.com", "groupName": "IT2-2301"}}
+{"case": "padded valid email", "status": 400, "result": {"type": "about:blank", "title": "Bad Request", "status": 400, "detail": "Check the student fields", "instance": "/api/sarsembayev-eldar/students", "errors": {"email": "must be a well-formed email address"}}}
+{"case": "Unicode lowercase expansion", "status": 409, "result": {"type": "about:blank", "title": "Conflict", "status": 409, "detail": "A student with this email already exists", "instance": "/api/sarsembayev-eldar/students"}}

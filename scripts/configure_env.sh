@@ -7,5 +7,5 @@ if [[ -f .env ]]; then
 fi
 umask 077
 password=$(od -An -N24 -tx1 /dev/urandom | tr -d ' \n')
-printf 'POSTGRES_DB=student_api\nPOSTGRES_USER=student_api\nPOSTGRES_PASSWORD=%s\nAPP_PORT=8083\nIMAGE_TAG=v1.0.1-sarsembayev-eldar-37006\n' "$password" > .env
+printf 'POSTGRES_DB=student_api\nPOSTGRES_USER=student_api\nPOSTGRES_PASSWORD=%s\nAPP_PORT=8083\nIMAGE_TAG=v1.0.2-sarsembayev-eldar-37006\n' "$password" > .env
 printf 'Created a private local .env. Password was not printed.\n'
