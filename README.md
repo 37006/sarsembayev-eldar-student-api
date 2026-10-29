@@ -45,3 +45,5 @@ Continuous Integration checks each change by building and testing it. Continuous
 ## CRUD feature by Eldar Sarsembayev
 
 I added PUT updates for existing students. A missing student returns 404, invalid fields return 400, and an email already used by another student returns 409.
+
+The CRUD feature includes automated checks for successful updates, missing IDs, invalid updates, deletion and email normalization.

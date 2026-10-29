@@ -65,4 +65,36 @@ class StudentApiTests {
         mvc.perform(post(BASE).contentType(MediaType.APPLICATION_JSON).content(VALID.replace("Eldar", "A".repeat(81))))
             .andExpect(status().isBadRequest());
     }
+
+    @Autowired com.fasterxml.jackson.databind.ObjectMapper mapper;
+    private long createStudent() throws Exception {
+        String json = mvc.perform(post(BASE).contentType(MediaType.APPLICATION_JSON).content(VALID))
+            .andExpect(status().isCreated()).andReturn().getResponse().getContentAsString();
+        return mapper.readTree(json).get("id").asLong();
+    }
+    @Test void updatesExistingStudent() throws Exception {
+        long id = createStudent();
+        mvc.perform(put(BASE + "/" + id).contentType(MediaType.APPLICATION_JSON).content(VALID.replace("IT2-2301", "IT2-2301-UPDATED")))
+            .andExpect(status().isOk()).andExpect(jsonPath("$.groupName").value("IT2-2301-UPDATED"));
+        mvc.perform(get(BASE + "/" + id)).andExpect(jsonPath("$.groupName").value("IT2-2301-UPDATED"));
+    }
+    @Test void updateMissingReturns404() throws Exception {
+        mvc.perform(put(BASE + "/99999999").contentType(MediaType.APPLICATION_JSON).content(VALID))
+            .andExpect(status().isNotFound());
+    }
+    @Test void invalidUpdateReturns400() throws Exception {
+        long id = createStudent();
+        mvc.perform(put(BASE + "/" + id).contentType(MediaType.APPLICATION_JSON).content("{}"))
+            .andExpect(status().isBadRequest());
+        mvc.perform(get(BASE + "/" + id)).andExpect(jsonPath("$.firstName").value("Eldar"));
+    }
+    @Test void deletesExistingStudent() throws Exception {
+        long id = createStudent();
+        mvc.perform(delete(BASE + "/" + id)).andExpect(status().isNoContent());
+        mvc.perform(get(BASE + "/" + id)).andExpect(status().isNotFound());
+    }
+    @Test void normalizesEmailCase() throws Exception {
+        mvc.perform(post(BASE).contentType(MediaType.APPLICATION_JSON).content(VALID.replace("37006@iitu.edu.kz", "37006@IITU.EDU.KZ")))
+            .andExpect(status().isCreated()).andExpect(jsonPath("$.email").value("37006@iitu.edu.kz"));
+    }
 }
