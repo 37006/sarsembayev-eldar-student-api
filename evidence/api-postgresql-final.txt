@@ -1,0 +1,29 @@
+GET / -> 200
+{"student":"Eldar Sarsembayev","studentId":"37006","students":"/api/sarsembayev-eldar/students","group":"IT2-2301","version":"1.0.1","application":"Sarsembayev Eldar Student API"}
+GET /actuator/health -> 200
+{"status":"UP"}
+POST /api/sarsembayev-eldar/students -> 201
+{"id":4,"firstName":"Eldar","lastName":"Sarsembayev","email":"eldar.3f0412ea02@example.com","groupName":"IT2-2301"}
+GET /api/sarsembayev-eldar/students -> 200
+[{"id":3,"firstName":"Eldar","lastName":"Sarsembayev","email":"persistence.37006.1793290857@example.com","groupName":"IT2-2301"},{"id":4,"firstName":"Eldar","lastName":"Sarsembayev","email":"eldar.3f0412ea02@example.com","groupName":"IT2-2301"}]
+GET /api/sarsembayev-eldar/students/4 -> 200
+{"id":4,"firstName":"Eldar","lastName":"Sarsembayev","email":"eldar.3f0412ea02@example.com","groupName":"IT2-2301"}
+PUT /api/sarsembayev-eldar/students/4 -> 200
+{"id":4,"firstName":"Eldar","lastName":"Sarsembayev","email":"eldar.3f0412ea02@example.com","groupName":"IT2-2301-UPDATED"}
+GET /api/sarsembayev-eldar/students/4 -> 200
+{"id":4,"firstName":"Eldar","lastName":"Sarsembayev","email":"eldar.3f0412ea02@example.com","groupName":"IT2-2301-UPDATED"}
+POST /api/sarsembayev-eldar/students -> 409
+{"type":"about:blank","title":"Conflict","status":409,"detail":"A student with this email already exists","instance":"/api/sarsembayev-eldar/students"}
+POST /api/sarsembayev-eldar/students -> 400
+{"type":"about:blank","title":"Bad Request","status":400,"detail":"Check the student fields","instance":"/api/sarsembayev-eldar/students","errors":{"email":"must be a well-formed email address"}}
+PUT /api/sarsembayev-eldar/students/999999999 -> 404
+{"type":"about:blank","title":"Not Found","status":404,"detail":"Student with ID 999999999 was not found","instance":"/api/sarsembayev-eldar/students/999999999"}
+GET /api/sarsembayev-eldar/students/abc -> 400
+{"type":"about:blank","title":"Bad Request","status":400,"detail":"The request contains malformed JSON or an invalid student ID","instance":"/api/sarsembayev-eldar/students/abc"}
+DELETE /api/sarsembayev-eldar/students/4 -> 204
+
+GET /api/sarsembayev-eldar/students/4 -> 404
+{"type":"about:blank","title":"Not Found","status":404,"detail":"Student with ID 4 was not found","instance":"/api/sarsembayev-eldar/students/4"}
+DELETE /api/sarsembayev-eldar/students/4 -> 404
+{"type":"about:blank","title":"Not Found","status":404,"detail":"Student with ID 4 was not found","instance":"/api/sarsembayev-eldar/students/4"}
+PASS: real PostgreSQL CRUD and error responses

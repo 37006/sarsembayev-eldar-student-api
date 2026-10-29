@@ -1,0 +1,174 @@
+Initial log size: 0
+.
+./.dockerignore
+./.env.example
+./Dockerfile
+./Jenkinsfile
+./README.md
+./backups
+./backups/.gitkeep
+./docker-compose.yml
+./evidence
+./evidence/git-workflow.txt
+./evidence/gradle-tests.txt
+./evidence/initial-gradle-build.txt
+./evidence/linux-administration.txt
+./gradle
+./gradle.properties
+./gradle/wrapper
+./gradlew
+./gradlew.bat
+./logs
+./logs/.gitkeep
+./logs/Sarsembayev_Eldar_system_report.log
+./scripts
+./scripts/Sarsembayev_Eldar_system_report.sh
+./scripts/api_check.py
+./scripts/configure_env.sh
+./scripts/linux_evidence.sh
+./scripts/wait_for_api.sh
+./settings.gradle
+./src
+./src/main
+./src/test
+Student: Eldar Sarsembayev
+Group: IT2-2301
+Student ID: 37006
+
+Date and time: 2026-10-29T21:12:19+05:00
+Username: eldar
+
+Operating system
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+
+Kernel
+Linux 6.18.54.1-microsoft-standard-WSL2 x86_64 GNU/Linux
+
+CPU
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           39 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  20
+On-line CPU(s) list:                     0-19
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Core(TM) i5-14600KF
+CPU family:                              6
+Model:                                   183
+Thread(s) per core:                      2
+Core(s) per socket:                      10
+Socket(s):                               1
+Stepping:                                1
+BogoMIPS:                                6988.80
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni vnmi umip waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize ibt flush_l1d arch_capabilities
+Virtualization:                          VT-x
+Hypervisor vendor:                       Microsoft
+Virtualization type:                     full
+L1d cache:                               480 KiB (10 instances)
+L1i cache:                               320 KiB (10 instances)
+L2 cache:                                20 MiB (10 instances)
+L3 cache:                                24 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0-19
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Ghostwrite:                Not affected
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Old microcode:             Not affected
+Vulnerability Reg file data sampling:    Mitigation; Clear Register File
+Vulnerability Retbleed:                  Mitigation; Enhanced IBRS
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
+
+Memory
+               total        used        free      shared  buff/cache   available
+Mem:           7.7Gi       1.1Gi       5.3Gi       4.2Mi       1.4Gi       6.6Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+Disk usage and available space
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.9G     0  3.9G   0% /usr/lib/modules/6.18.54.1-microsoft-standard-WSL2
+/dev/sdb         97M   97M     0 100% /usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2
+none            3.9G  4.0K  3.9G   1% /mnt/wsl
+drivers         476G  227G  250G  48% /usr/lib/wsl/drivers
+/dev/sdd       1007G  3.6G  953G   1% /
+none            3.9G   32K  3.9G   1% /mnt/wslg
+none            3.9G     0  3.9G   0% /usr/lib/wsl/lib
+rootfs          3.9G  3.4M  3.9G   1% /init
+none            3.9G  668K  3.9G   1% /run
+none            3.9G     0  3.9G   0% /run/lock
+none            3.9G     0  3.9G   0% /run/shm
+none            3.9G   80K  3.9G   1% /mnt/wslg/versions.txt
+none            3.9G   80K  3.9G   1% /mnt/wslg/doc
+C:\             476G  227G  250G  48% /mnt/c
+D:\             954G   98G  857G  11% /mnt/d
+tmpfs           786M   20K  786M   1% /run/user/0
+-rwxr-xr-x 1 eldar eldar 2370 Oct 29 21:12 backups/Sarsembayev_Eldar_README_backup.md
+-rwxr--r-- 1 eldar eldar  586 Oct 29 21:06 scripts/Sarsembayev_Eldar_system_report.sh
+PASS: README backup matches the source
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  1.2  0.1  21748 13084 ?        Ss   21:11   0:00 /sbin/init
+root           2  0.0  0.0   3804  2508 hvc0     Sl+  21:11   0:00 /init
+root           3  0.0  0.0   3664  2136 hvc0     S+   21:11   0:00 init-watcher
+root           8  0.0  0.0   3960  2436 hvc0     Sl+  21:11   0:00 plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --log-truncate
+root          51  0.2  0.1  34052 12764 ?        S<s  21:12   0:00 /usr/lib/systemd/systemd-journald
+root         107  0.2  0.0  24680  6416 ?        Ss   21:12   0:00 /usr/lib/systemd/systemd-udevd
+systemd+     122  0.1  0.1  21352 13172 ?        Ss   21:12   0:00 /usr/lib/systemd/systemd-resolved
+systemd+     123  0.0  0.0  91044  7988 ?        Ssl  21:12   0:00 /usr/lib/systemd/systemd-timesyncd
+root         175  0.0  0.0   4248  2680 ?        Ss   21:12   0:00 /usr/sbin/cron -f -P
+message+     176  0.0  0.0   9564  5352 ?        Ss   21:12   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+jenkins      179 52.4  4.8 11122332 390436 ?     Ssl  21:12   0:09 /usr/bin/java -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -jar /usr/share/java/jenkins.war --webroot=/var/cache/jenkins/war --httpPort=8080 --httpListenAddress=127.0.0.1
+root         185  0.0  0.1  18000  8852 ?        Ss   21:12   0:00 /usr/lib/systemd/systemd-logind
+root         188  0.0  0.1 1756636 13852 ?       Ssl  21:12   0:00 /usr/libexec/wsl-pro-service
+root         219  0.0  0.0   3128  1972 tty1     Ss+  21:12   0:00 /sbin/agetty -o -p -- \u --noclear - linux
+syslog       225  0.1  0.0 222524  5572 ?        Ssl  21:12   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         236  0.3  0.2 107056 23204 ?        Ssl  21:12   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         242  0.7  0.6 2342160 50360 ?       Ssl  21:12   0:00 /usr/bin/containerd
+root         312  0.0  0.0  17300  7548 ?        Ss   21:12   0:00 /usr/lib/systemd/systemd-timedated
+root         316  1.8  1.2 2546632 98228 ?       Ssl  21:12   0:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root         672  0.1  0.1 1268296 12128 ?       Sl   21:12   0:00 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 229672ddfdb14ed42314e7d962ee461d86d7b84c3c0c5b520287cff01f5a4415 -address /run/containerd/containerd.sock
+10001        696  0.8  0.2 103740 23612 ?        Ss   21:12   0:00 python -m app.main
+root         721  0.0  0.0 1747168 5504 ?        Sl   21:12   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 127.0.0.1 -host-port 8082 -container-ip 172.17.0.2 -container-port 8080 -use-listen-fd
+root         808  0.0  0.0   3812  1416 ?        Ss   21:12   0:00 /init
+root         809  0.0  0.0   3880  1484 ?        S    21:12   0:00 /init
+root         810  0.0  0.0   4764  3420 pts/0    Ss+  21:12   0:00 bash /mnt/c/Users/gudvill/.codex/.chatgpt-projects/g-p-6abcd5256c048191adbf15c359c66ed3/midterm-work/build.sh
+root         811  0.0  0.0   6676  4488 pts/1    Ss   21:12   0:00 /bin/login -f
+root         844  0.1  0.1  20412 11588 ?        Ss   21:12   0:00 /usr/lib/systemd/systemd --user
+root         845  0.0  0.0  21184  3496 ?        S    21:12   0:00 (sd-pam)
+root         867  0.0  0.0   5952  5276 pts/1    S+   21:12   0:00 -bash
+root        1259  0.0  0.0   6804  4052 pts/0    S+   21:12   0:00 runuser -u eldar -- bash scripts/linux_evidence.sh
+eldar       1260  0.0  0.0   4764  3432 pts/0    S+   21:12   0:00 bash scripts/linux_evidence.sh
+eldar       1284  0.0  0.0   9596  5080 pts/0    R+   21:12   0:00 ps aux
+
+Java processes, if present
+179 /usr/bin/java -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -jar /usr/share/java/jenkins.war --webroot=/var/cache/jenkins/war --httpPort=8080 --httpListenAddress=127.0.0.1
+none            3.9G   80K  3.9G   1% /mnt/wslg/versions.txt
+none            3.9G   80K  3.9G   1% /mnt/wslg/doc
+C:\             476G  227G  250G  48% /mnt/c
+D:\             954G   98G  857G  11% /mnt/d
+tmpfs           786M   20K  786M   1% /run/user/0
+Student: Eldar Sarsembayev
+
+Redirection: > replaces a file; >> appends to a file.

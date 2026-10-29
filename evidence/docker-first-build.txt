@@ -1,0 +1,369 @@
+ Image postgres:17-alpine Pulling 
+ d5bf1ad711f7 Pulling fs layer 0B
+ 694a01b64034 Pulling fs layer 0B
+ 7b229517ed22 Pulling fs layer 0B
+ f5e975d661d7 Pulling fs layer 0B
+ 9098654d3377 Pulling fs layer 0B
+ e018eb860c5e Pulling fs layer 0B
+ fa5e490e3893 Pulling fs layer 0B
+ d6e09b1bfe5f Pulling fs layer 0B
+ 7a82a00c713d Pulling fs layer 0B
+ dddde5442af4 Pulling fs layer 0B
+ 112f26c8faed Download complete 0B
+ e22336567ca8 Download complete 0B
+ dddde5442af4 Download complete 0B
+ d5bf1ad711f7 Download complete 0B
+ 694a01b64034 Downloading 1.049MB
+ 694a01b64034 Downloading 2.097MB
+ 694a01b64034 Downloading 4.194MB
+ 694a01b64034 Downloading 11.53MB
+ f5e975d661d7 Download complete 0B
+ 694a01b64034 Downloading 16.78MB
+ 694a01b64034 Downloading 22.02MB
+ e018eb860c5e Download complete 0B
+ 7b229517ed22 Downloading 1.049MB
+ 694a01b64034 Downloading 25.17MB
+ 7b229517ed22 Downloading 1.049MB
+ 694a01b64034 Downloading 30.41MB
+ 7b229517ed22 Downloading 1.049MB
+ 694a01b64034 Downloading 34.6MB
+ 9098654d3377 Download complete 0B
+ 7b229517ed22 Downloading 1.049MB
+ 694a01b64034 Downloading 36.7MB
+ 7b229517ed22 Downloading 2.097MB
+ 694a01b64034 Downloading 39.85MB
+ fa5e490e3893 Download complete 0B
+ 7b229517ed22 Downloading 2.097MB
+ 694a01b64034 Downloading 42.99MB
+ 694a01b64034 Downloading 45.09MB
+ 7b229517ed22 Downloading 2.097MB
+ 7b229517ed22 Downloading 2.097MB
+ d6e09b1bfe5f Download complete 0B
+ 694a01b64034 Downloading 47.19MB
+ 7b229517ed22 Downloading 2.097MB
+ 694a01b64034 Downloading 47.19MB
+ 694a01b64034 Downloading 51.38MB
+ 7a82a00c713d Download complete 0B
+ 7b229517ed22 Downloading 3.146MB
+ 7b229517ed22 Downloading 3.146MB
+ 694a01b64034 Downloading 52.43MB
+ 694a01b64034 Downloading 54.53MB
+ 7b229517ed22 Downloading 3.146MB
+ 694a01b64034 Downloading 55.57MB
+ 7b229517ed22 Download complete 0B
+ 7b229517ed22 Extracting 1B
+ 694a01b64034 Downloading 56.62MB
+ dddde5442af4 Pull complete 0B
+ 9098654d3377 Pull complete 0B
+ fa5e490e3893 Pull complete 0B
+ 7b229517ed22 Pull complete 0B
+ 694a01b64034 Downloading 57.67MB
+ 694a01b64034 Downloading 58.72MB
+ 694a01b64034 Downloading 60.82MB
+ 694a01b64034 Downloading 61.87MB
+ 694a01b64034 Downloading 62.91MB
+ 694a01b64034 Downloading 65.01MB
+ 694a01b64034 Downloading 66.06MB
+ 694a01b64034 Downloading 67.11MB
+ 694a01b64034 Downloading 68.16MB
+ 694a01b64034 Downloading 70.25MB
+ 694a01b64034 Downloading 71.3MB
+ 694a01b64034 Downloading 71.3MB
+ 694a01b64034 Downloading 73.4MB
+ 694a01b64034 Downloading 74.45MB
+ 694a01b64034 Downloading 75.5MB
+ 694a01b64034 Downloading 76.55MB
+ 694a01b64034 Downloading 77.59MB
+ 694a01b64034 Downloading 78.64MB
+ 694a01b64034 Downloading 79.69MB
+ 694a01b64034 Downloading 80.74MB
+ 694a01b64034 Downloading 81.79MB
+ 694a01b64034 Downloading 82.84MB
+ 694a01b64034 Downloading 82.84MB
+ 694a01b64034 Downloading 83.89MB
+ 694a01b64034 Downloading 84.93MB
+ 694a01b64034 Downloading 85.98MB
+ 694a01b64034 Downloading 85.98MB
+ 694a01b64034 Downloading 87.03MB
+ 694a01b64034 Downloading 88.08MB
+ 694a01b64034 Downloading 88.08MB
+ 694a01b64034 Downloading 89.13MB
+ 694a01b64034 Downloading 90.18MB
+ 694a01b64034 Downloading 90.18MB
+ 694a01b64034 Downloading 90.18MB
+ 694a01b64034 Downloading 91.23MB
+ 694a01b64034 Downloading 91.23MB
+ 694a01b64034 Downloading 92.27MB
+ 694a01b64034 Downloading 92.27MB
+ 694a01b64034 Downloading 93.32MB
+ 694a01b64034 Downloading 94.37MB
+ 694a01b64034 Downloading 94.37MB
+ 694a01b64034 Downloading 95.42MB
+ 694a01b64034 Downloading 95.42MB
+ 694a01b64034 Downloading 96.47MB
+ 694a01b64034 Downloading 96.47MB
+ 694a01b64034 Downloading 97.52MB
+ 694a01b64034 Downloading 97.52MB
+ 694a01b64034 Downloading 98.57MB
+ 694a01b64034 Downloading 98.57MB
+ 694a01b64034 Downloading 99.61MB
+ 694a01b64034 Downloading 99.61MB
+ 694a01b64034 Downloading 100.7MB
+ 694a01b64034 Downloading 100.7MB
+ 694a01b64034 Downloading 100.7MB
+ 694a01b64034 Downloading 101.7MB
+ 694a01b64034 Downloading 101.7MB
+ 694a01b64034 Downloading 102.8MB
+ 694a01b64034 Downloading 102.8MB
+ 694a01b64034 Downloading 103.8MB
+ 694a01b64034 Downloading 103.8MB
+ 694a01b64034 Downloading 103.8MB
+ 694a01b64034 Downloading 104.9MB
+ 694a01b64034 Downloading 104.9MB
+ 694a01b64034 Downloading 105.9MB
+ 694a01b64034 Downloading 105.9MB
+ 694a01b64034 Downloading 107MB
+ 694a01b64034 Downloading 107MB
+ 694a01b64034 Downloading 108MB
+ 694a01b64034 Downloading 108MB
+ 694a01b64034 Downloading 108MB
+ 694a01b64034 Downloading 109.1MB
+ 694a01b64034 Downloading 109.1MB
+ 694a01b64034 Downloading 110.1MB
+ 694a01b64034 Downloading 110.1MB
+ 694a01b64034 Downloading 111.1MB
+ 694a01b64034 Downloading 111.1MB
+ 694a01b64034 Downloading 112.2MB
+ 694a01b64034 Downloading 112.4MB
+ 694a01b64034 Downloading 112.4MB
+ 694a01b64034 Download complete 0B
+ 694a01b64034 Extracting 1B
+ 694a01b64034 Extracting 1B
+ 694a01b64034 Extracting 1B
+ 694a01b64034 Extracting 1B
+ 694a01b64034 Extracting 1B
+ 694a01b64034 Extracting 1B
+ 694a01b64034 Extracting 1B
+ 694a01b64034 Extracting 1B
+ 694a01b64034 Extracting 1B
+ e018eb860c5e Pull complete 0B
+ d6e09b1bfe5f Pull complete 0B
+ 7a82a00c713d Pull complete 0B
+ 694a01b64034 Pull complete 0B
+ d5bf1ad711f7 Pull complete 0B
+ f5e975d661d7 Pull complete 0B
+ Image postgres:17-alpine Pulled 
+ Image sarsembayev-eldar-student-api:v1.0-sarsembayev-eldar-37006 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 605B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 710B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/eclipse-temurin:21-jre-jammy
+#3 DONE 1.8s
+
+#4 [internal] load metadata for docker.io/library/eclipse-temurin:21-jdk-jammy
+#4 DONE 1.8s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 98B done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 72.21kB done
+#6 DONE 0.0s
+
+#7 [stage-1 1/4] FROM docker.io/library/eclipse-temurin:21-jre-jammy@sha256:9603446cf51296842eab342514857cf7ab55a8891cd564e6c68ec237fae65a16
+#7 resolve docker.io/library/eclipse-temurin:21-jre-jammy@sha256:9603446cf51296842eab342514857cf7ab55a8891cd564e6c68ec237fae65a16 0.0s done
+#7 DONE 0.1s
+
+#8 [build 1/7] FROM docker.io/library/eclipse-temurin:21-jdk-jammy@sha256:4e61d0b3471137e239397789661f6adeaf8db9adcfae45916b22f628c8a32dc0
+#8 resolve docker.io/library/eclipse-temurin:21-jdk-jammy@sha256:4e61d0b3471137e239397789661f6adeaf8db9adcfae45916b22f628c8a32dc0 0.0s done
+#8 sha256:e63591917c2638c7c92da89daea6d1681f9e1f8459c7fbeaffe405d082fa7512 0B / 2.46kB 0.2s
+#8 sha256:e63591917c2638c7c92da89daea6d1681f9e1f8459c7fbeaffe405d082fa7512 2.46kB / 2.46kB 0.5s done
+#8 sha256:0d3d6b5769920966d540e01ce842e4ae40ef913428ccc17c3cafddb4912c83a6 0B / 160B 0.2s
+#8 sha256:0d3d6b5769920966d540e01ce842e4ae40ef913428ccc17c3cafddb4912c83a6 160B / 160B 0.3s done
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 0B / 158.12MB 0.2s
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 0B / 20.66MB 0.2s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 12.58MB / 158.12MB 0.6s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 22.02MB / 158.12MB 1.1s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 31.46MB / 158.12MB 1.8s
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 1.05MB / 20.66MB 2.4s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 39.85MB / 158.12MB 2.7s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 48.23MB / 158.12MB 3.6s
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 2.10MB / 20.66MB 4.1s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 56.62MB / 158.12MB 4.5s
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 3.15MB / 20.66MB 5.3s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 65.01MB / 158.12MB 5.9s
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 4.19MB / 20.66MB 6.5s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 73.40MB / 158.12MB 7.5s
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 5.24MB / 20.66MB 7.7s
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 6.29MB / 20.66MB 8.7s
+#8 ...
+
+#7 [stage-1 1/4] FROM docker.io/library/eclipse-temurin:21-jre-jammy@sha256:9603446cf51296842eab342514857cf7ab55a8891cd564e6c68ec237fae65a16
+#7 sha256:fc1f497653d53af829e46e91dcaf6c29c6f7948e62f269f702d6cd3bdcff3420 160B / 160B 0.2s done
+#7 sha256:7feed84bdb0ba0f09af1bb44b94d20d3baa0269870533da51898bd7d0233c6f5 2.46kB / 2.46kB 0.3s done
+#7 sha256:ed3bb02c49f401a8ddf62a7ae37df8b0514000ae75277a0dc0bdb63621b65f60 53.10MB / 53.10MB 1.8s done
+#7 sha256:37f262eb0d42c498d032f728e087e799e95798a78931fddbc98b6b69d668349d 16.12MB / 16.12MB 1.2s done
+#7 sha256:0626d3cc316c9fea3d4891e2ec19b8f371fe22ffb915622f6072a2ee2ca9017f 16.78MB / 29.75MB 9.8s
+#7 ...
+
+#8 [build 1/7] FROM docker.io/library/eclipse-temurin:21-jdk-jammy@sha256:4e61d0b3471137e239397789661f6adeaf8db9adcfae45916b22f628c8a32dc0
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 7.34MB / 20.66MB 9.8s
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 8.39MB / 20.66MB 10.8s
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 9.44MB / 20.66MB 12.0s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 81.79MB / 158.12MB 12.6s
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 10.49MB / 20.66MB 13.5s
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 11.53MB / 20.66MB 14.9s
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 12.58MB / 20.66MB 16.4s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 89.13MB / 158.12MB 17.7s
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 13.63MB / 20.66MB 17.6s
+#8 ...
+
+#7 [stage-1 1/4] FROM docker.io/library/eclipse-temurin:21-jre-jammy@sha256:9603446cf51296842eab342514857cf7ab55a8891cd564e6c68ec237fae65a16
+#7 sha256:0626d3cc316c9fea3d4891e2ec19b8f371fe22ffb915622f6072a2ee2ca9017f 29.75MB / 29.75MB 18.7s done
+#7 extracting sha256:0626d3cc316c9fea3d4891e2ec19b8f371fe22ffb915622f6072a2ee2ca9017f 0.4s done
+#7 extracting sha256:37f262eb0d42c498d032f728e087e799e95798a78931fddbc98b6b69d668349d 0.3s done
+#7 DONE 19.7s
+
+#8 [build 1/7] FROM docker.io/library/eclipse-temurin:21-jdk-jammy@sha256:4e61d0b3471137e239397789661f6adeaf8db9adcfae45916b22f628c8a32dc0
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 14.68MB / 20.66MB 18.8s
+#8 ...
+
+#7 [stage-1 1/4] FROM docker.io/library/eclipse-temurin:21-jre-jammy@sha256:9603446cf51296842eab342514857cf7ab55a8891cd564e6c68ec237fae65a16
+#7 extracting sha256:ed3bb02c49f401a8ddf62a7ae37df8b0514000ae75277a0dc0bdb63621b65f60 0.5s done
+#7 extracting sha256:fc1f497653d53af829e46e91dcaf6c29c6f7948e62f269f702d6cd3bdcff3420 done
+#7 extracting sha256:7feed84bdb0ba0f09af1bb44b94d20d3baa0269870533da51898bd7d0233c6f5 done
+#7 DONE 20.2s
+
+#8 [build 1/7] FROM docker.io/library/eclipse-temurin:21-jdk-jammy@sha256:4e61d0b3471137e239397789661f6adeaf8db9adcfae45916b22f628c8a32dc0
+#8 ...
+
+#9 [stage-1 2/4] WORKDIR /app
+#9 DONE 0.8s
+
+#8 [build 1/7] FROM docker.io/library/eclipse-temurin:21-jdk-jammy@sha256:4e61d0b3471137e239397789661f6adeaf8db9adcfae45916b22f628c8a32dc0
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 15.73MB / 20.66MB 19.8s
+#8 ...
+
+#10 [stage-1 3/4] RUN groupadd --system studentapi && useradd --system --gid studentapi --home-dir /app studentapi
+#10 DONE 0.2s
+
+#8 [build 1/7] FROM docker.io/library/eclipse-temurin:21-jdk-jammy@sha256:4e61d0b3471137e239397789661f6adeaf8db9adcfae45916b22f628c8a32dc0
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 16.78MB / 20.66MB 21.0s
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 17.83MB / 20.66MB 22.1s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 95.42MB / 158.12MB 22.8s
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 18.87MB / 20.66MB 23.4s
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 19.92MB / 20.66MB 24.5s
+#8 sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 20.66MB / 20.66MB 25.1s done
+#8 extracting sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb
+#8 extracting sha256:a116184e941bb99c05fa604f2cee62f4e94214aaee13d9ea251f5e35c0fe0ceb 0.3s done
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 100.66MB / 158.12MB 27.9s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 103.81MB / 158.12MB 32.9s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 109.05MB / 158.12MB 38.0s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 117.44MB / 158.12MB 41.6s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 125.83MB / 158.12MB 44.0s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 134.22MB / 158.12MB 46.7s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 142.61MB / 158.12MB 50.9s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 150.99MB / 158.12MB 55.1s
+#8 sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 158.12MB / 158.12MB 57.8s done
+#8 extracting sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635
+#8 extracting sha256:5c28ed0772975c49d649e2e681672a6ab6ad9f6bdd6889ba39ede9c16194d635 0.9s done
+#8 DONE 59.8s
+
+#8 [build 1/7] FROM docker.io/library/eclipse-temurin:21-jdk-jammy@sha256:4e61d0b3471137e239397789661f6adeaf8db9adcfae45916b22f628c8a32dc0
+#8 extracting sha256:0d3d6b5769920966d540e01ce842e4ae40ef913428ccc17c3cafddb4912c83a6 done
+#8 extracting sha256:e63591917c2638c7c92da89daea6d1681f9e1f8459c7fbeaffe405d082fa7512 done
+#8 DONE 59.8s
+
+#11 [build 2/7] WORKDIR /workspace
+#11 DONE 0.5s
+
+#12 [build 3/7] COPY gradlew gradlew.bat build.gradle settings.gradle gradle.properties ./
+#12 DONE 0.0s
+
+#13 [build 4/7] COPY gradle ./gradle
+#13 DONE 0.0s
+
+#14 [build 5/7] RUN chmod +x gradlew
+#14 DONE 0.2s
+
+#15 [build 6/7] COPY src ./src
+#15 DONE 0.0s
+
+#16 [build 7/7] RUN ./gradlew --no-daemon clean test bootJar
+#16 0.237 Downloading https://services.gradle.org/distributions/gradle-8.14.3-bin.zip
+#16 3.197 .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
+#16 322.3 
+#16 322.3 Welcome to Gradle 8.14.3!
+#16 322.3 
+#16 322.3 Here are the highlights of this release:
+#16 322.3  - Java 24 support
+#16 322.3  - GraalVM Native Image toolchain selection
+#16 322.3  - Enhancements to test reporting
+#16 322.3  - Build Authoring improvements
+#16 322.3 
+#16 322.3 For more details see https://docs.gradle.org/8.14.3/release-notes.html
+#16 322.3 
+#16 322.4 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+#16 322.9 Daemon will be stopped at the end of the build 
+#16 334.9 > Task :clean UP-TO-DATE
+#16 334.9 > Task :bootBuildInfo
+#16 341.8 > Task :compileJava
+#16 341.8 > Task :processResources
+#16 341.8 > Task :classes
+#16 341.8 > Task :resolveMainClassName
+#16 342.9 > Task :bootJar
+#16 344.4 > Task :compileTestJava
+#16 344.5 > Task :processTestResources
+#16 344.5 > Task :testClasses
+#16 347.3 OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+#16 347.7 2026-10-29T16:19:27.499Z  INFO 219 --- [sarsembayev-eldar-student-api] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+#16 347.7 2026-10-29T16:19:27.501Z  INFO 219 --- [sarsembayev-eldar-student-api] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+#16 347.7 2026-10-29T16:19:27.502Z  INFO 219 --- [sarsembayev-eldar-student-api] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+#16 347.7 > Task :test
+#16 347.7 
+#16 347.7 BUILD SUCCESSFUL in 5m 47s
+#16 347.7 9 actionable tasks: 8 executed, 1 up-to-date
+#16 DONE 348.2s
+
+#17 [stage-1 4/4] COPY --from=build --chown=studentapi:studentapi /workspace/build/libs/student-api.jar app.jar
+#17 DONE 0.1s
+
+#18 exporting to image
+#18 exporting layers
+#18 exporting layers 0.9s done
+#18 exporting manifest sha256:43de15b62eeaadbc7646372d53f068ddddf66a461a3ac277b8081e139032ca5a done
+#18 exporting config sha256:48a12d268cdcd06efd7ffd60b7743ef58abe2dd777cf4ac79753d16b20cc4a80 done
+#18 exporting attestation manifest sha256:cb2fc3f711fe78a623ac219f7355fa80eef6be168e58ff037879defe49c5fbd5 done
+#18 exporting manifest list sha256:32c2594662c3a8697d6101e575536c9088011455bca836eac1819933094dd5c6 0.0s done
+#18 naming to docker.io/library/sarsembayev-eldar-student-api:v1.0-sarsembayev-eldar-37006 done
+#18 unpacking to docker.io/library/sarsembayev-eldar-student-api:v1.0-sarsembayev-eldar-37006
+#18 unpacking to docker.io/library/sarsembayev-eldar-student-api:v1.0-sarsembayev-eldar-37006 1.3s done
+#18 DONE 2.2s
+
+#19 resolving provenance for metadata file
+#19 DONE 0.0s
+ Image sarsembayev-eldar-student-api:v1.0-sarsembayev-eldar-37006 Built 
+ Network sarsembayev-eldar-student-api_student-network Creating 
+ Volume sarsembayev-eldar-student-api_student-data Creating 
+ Network sarsembayev-eldar-student-api_student-network Creating 
+ Volume sarsembayev-eldar-student-api_student-data Creating 
+ Volume sarsembayev-eldar-student-api_student-data Created 
+ Volume sarsembayev-eldar-student-api_student-data Created 
+ Network sarsembayev-eldar-student-api_student-network Created 
+ Network sarsembayev-eldar-student-api_student-network Created 
+ Container sarsembayev-eldar-student-api-db Creating 
+ Container sarsembayev-eldar-student-api-db Created 
+ Container sarsembayev-eldar-student-api-app Creating 
+ Container sarsembayev-eldar-student-api-app Created 
+ Container sarsembayev-eldar-student-api-db Starting 
+ Container sarsembayev-eldar-student-api-db Started 
+ Container sarsembayev-eldar-student-api-db Waiting 
+ Container sarsembayev-eldar-student-api-db Healthy 
+ Container sarsembayev-eldar-student-api-app Starting 
+ Container sarsembayev-eldar-student-api-app Started 

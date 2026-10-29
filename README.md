@@ -47,3 +47,12 @@ Continuous Integration checks each change by building and testing it. Continuous
 I added PUT updates for existing students. A missing student returns 404, invalid fields return 400, and an email already used by another student returns 409.
 
 The CRUD feature includes automated checks for successful updates, missing IDs, invalid updates, deletion and email normalization.
+
+## Project files and evidence
+
+- `docs/API.md`: endpoints, request format and curl examples.
+- `docs/REPRODUCE.md`: Linux, Docker and Jenkins reproduction instructions.
+- `docs/REPORT.md`: requirement-by-requirement results and evidence references.
+- `evidence/`: real command transcripts, API responses and Jenkins records.
+
+No separate PDF report or mandatory video is specified in this Midterm task. The code, GitHub history and actual demonstrations are the primary results.

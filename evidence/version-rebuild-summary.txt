@@ -1,0 +1,10 @@
+[main 09d079d] Sarsembayev Eldar: release application 1.0.1 with a new personalized image tag
+ 6 files changed, 6 insertions(+), 6 deletions(-)
+PASS: API is ready at http://127.0.0.1:8083/actuator/health
+{"student":"Eldar Sarsembayev","studentId":"37006","students":"/api/sarsembayev-eldar/students","group":"IT2-2301","version":"1.0.1","application":"Sarsembayev Eldar Student API"}PASS: database record survived rebuilding the application from 1.0.0 to 1.0.1
+Database connection: DB_URL=jdbc:postgresql://db:5432/student_api
+Container user: studentapi
+IMAGE                                                          ID             DISK USAGE   CONTENT SIZE   EXTRA
+sarsembayev-eldar-student-api:v1.0-sarsembayev-eldar-37006     32c2594662c3        511MB          150MB        
+sarsembayev-eldar-student-api:v1.0.1-sarsembayev-eldar-37006   eac3feefb36d        511MB          150MB   U    
+ID=sha256:eac3feefb36d1b7ca7f911e1fae82add61e6ce16f36c3fbd741e23fd9d0f8e8b Size=511046127 Created=2026-10-29T21:21:43.284714782+05:00

@@ -1,0 +1,115 @@
+$ git init -b main
+Initialized empty Git repository in /home/eldar/devops/sarsembayev-eldar-student-api/.git/
+$ git config user.name Eldar Sarsembayev
+$ git config user.email 37006@iitu.edu.kz
+$ git config core.autocrlf false
+$ git add .
+warning: in the working copy of 'gradlew.bat', LF will be replaced by CRLF the next time Git touches it
+$ git commit -m Initial commit: Sarsembayev Eldar Student API
+[main (root-commit) 81d61cb] Initial commit: Sarsembayev Eldar Student API
+ 36 files changed, 980 insertions(+)
+ create mode 100755 .dockerignore
+ create mode 100755 .env.example
+ create mode 100755 .gitattributes
+ create mode 100755 .gitignore
+ create mode 100755 Dockerfile
+ create mode 100755 Jenkinsfile
+ create mode 100755 README.md
+ create mode 100644 backups/.gitkeep
+ create mode 100755 build.gradle
+ create mode 100755 docker-compose.yml
+ create mode 100644 evidence/git-workflow.txt
+ create mode 100644 evidence/initial-gradle-build.txt
+ create mode 100755 gradle.properties
+ create mode 100644 gradle/wrapper/gradle-wrapper.jar
+ create mode 100644 gradle/wrapper/gradle-wrapper.properties
+ create mode 100755 gradlew
+ create mode 100644 gradlew.bat
+ create mode 100644 logs/.gitkeep
+ create mode 100755 scripts/Sarsembayev_Eldar_system_report.sh
+ create mode 100755 scripts/api_check.py
+ create mode 100755 scripts/configure_env.sh
+ create mode 100755 scripts/linux_evidence.sh
+ create mode 100755 scripts/wait_for_api.sh
+ create mode 100755 settings.gradle
+ create mode 100755 src/main/java/kz/iitu/studentapi/ApiExceptionHandler.java
+ create mode 100755 src/main/java/kz/iitu/studentapi/InfoController.java
+ create mode 100755 src/main/java/kz/iitu/studentapi/Student.java
+ create mode 100755 src/main/java/kz/iitu/studentapi/StudentApiApplication.java
+ create mode 100755 src/main/java/kz/iitu/studentapi/StudentController.java
+ create mode 100755 src/main/java/kz/iitu/studentapi/StudentNotFoundException.java
+ create mode 100755 src/main/java/kz/iitu/studentapi/StudentRepository.java
+ create mode 100755 src/main/java/kz/iitu/studentapi/StudentRequest.java
+ create mode 100755 src/main/java/kz/iitu/studentapi/StudentService.java
+ create mode 100755 src/main/resources/application.yml
+ create mode 100755 src/test/java/kz/iitu/studentapi/StudentApiTests.java
+ create mode 100755 src/test/resources/application-test.yml
+$ git switch -c feature/sarsembayev-eldar-crud
+Switched to a new branch 'feature/sarsembayev-eldar-crud'
+$ git add .
+$ git commit -m Sarsembayev Eldar: implement validated student update operation
+[feature/sarsembayev-eldar-crud 1e39d6e] Sarsembayev Eldar: implement validated student update operation
+ 3 files changed, 14 insertions(+)
+$ git add .
+$ git commit -m Sarsembayev Eldar: test update validation and CRUD lifecycle
+[feature/sarsembayev-eldar-crud d229073] Sarsembayev Eldar: test update validation and CRUD lifecycle
+ 2 files changed, 34 insertions(+)
+$ git switch main
+Switched to branch 'main'
+$ git merge --no-ff feature/sarsembayev-eldar-crud -m Sarsembayev Eldar: merge tested CRUD feature
+Merge made by the 'ort' strategy.
+ README.md                                          |  6 ++++
+ .../java/kz/iitu/studentapi/StudentController.java |  4 +++
+ .../java/kz/iitu/studentapi/StudentService.java    |  6 ++++
+ .../java/kz/iitu/studentapi/StudentApiTests.java   | 32 ++++++++++++++++++++++
+ 4 files changed, 48 insertions(+)
+$ git switch -c feature/sarsembayev-eldar-documentation
+Switched to a new branch 'feature/sarsembayev-eldar-documentation'
+$ git add .
+$ git commit -m Sarsembayev Eldar: document API usage on personal branch
+[feature/sarsembayev-eldar-documentation 75f4fda] Sarsembayev Eldar: document API usage on personal branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+$ git switch main
+Switched to branch 'main'
+$ git add .
+$ git commit -m Sarsembayev Eldar: record completed CRUD implementation
+[main ff231e8] Sarsembayev Eldar: record completed CRUD implementation
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+$ git merge --no-ff feature/sarsembayev-eldar-documentation
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+$ git status --short
+UU README.md
+README conflict before manual resolution:
+# Sarsembayev Eldar Student API
+
+Eldar Sarsembayev | IT2-2301 | Student ID 37006 | DevOps Midterm
+
+<<<<<<< HEAD
+Project status: CRUD implementation completed by Eldar Sarsembayev.
+=======
+Project status: API usage documented by Eldar Sarsembayev.
+>>>>>>> feature/sarsembayev-eldar-documentation
+
+This project manages student records through a Spring Boot REST API and stores them in PostgreSQL. It is a separate project from my earlier Python laboratory work.
+
+## Requirements
+
+Java 21, Bash, Git, Docker Engine and Docker Compose. The Gradle wrapper downloads Gradle 8.14.3. Jenkins needs Java 21 and a Linux agent with access to Docker.
+$ git add README.md
+$ git commit -m Sarsembayev Eldar: resolve README status conflict retaining both results
+[main 91c4d13] Sarsembayev Eldar: resolve README status conflict retaining both results
+$ git log --graph --oneline --all
+*   91c4d13 Sarsembayev Eldar: resolve README status conflict retaining both results
+|\  
+| * 75f4fda Sarsembayev Eldar: document API usage on personal branch
+* | ff231e8 Sarsembayev Eldar: record completed CRUD implementation
+|/  
+*   cf6bfa5 Sarsembayev Eldar: merge tested CRUD feature
+|\  
+| * d229073 Sarsembayev Eldar: test update validation and CRUD lifecycle
+| * 1e39d6e Sarsembayev Eldar: implement validated student update operation
+|/  
+* 81d61cb Initial commit: Sarsembayev Eldar Student API
+$ git remote add origin https://github.com/37006/sarsembayev-eldar-student-api.git

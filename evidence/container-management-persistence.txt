@@ -1,0 +1,142 @@
+$ bash scripts/wait_for_api.sh
+PASS: API is ready at http://127.0.0.1:8083/actuator/health
+POST /api/sarsembayev-eldar/students -> 201
+{"id":3,"firstName":"Eldar","lastName":"Sarsembayev","email":"persistence.37006.1793290857@example.com","groupName":"IT2-2301"}
+$ docker compose ps
+NAME                                IMAGE                                                        COMMAND                  SERVICE   CREATED              STATUS                    PORTS
+sarsembayev-eldar-student-api-app   sarsembayev-eldar-student-api:v1.0-sarsembayev-eldar-37006   "java -XX:MaxRAMPerc…"   app       About a minute ago   Up 26 seconds             127.0.0.1:8083->8080/tcp
+sarsembayev-eldar-student-api-db    postgres:17-alpine                                           "docker-entrypoint.s…"   db        About a minute ago   Up 26 seconds (healthy)   5432/tcp
+$ docker compose logs --no-color --tail 60 app
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:19:36.976Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:19:37.008Z  WARN 1 --- [sarsembayev-eldar-student-api] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:19:37.008Z  WARN 1 --- [sarsembayev-eldar-student-api] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk_students_email" of relation "students" does not exist, skipping
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:19:37.010Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:19:37.379Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:19:37.419Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:19:37.426Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] k.iitu.studentapi.StudentApiApplication  : Started StudentApiApplication in 2.307 seconds (process running for 2.557)
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:19:38.917Z  INFO 1 --- [sarsembayev-eldar-student-api] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:19:38.918Z  INFO 1 --- [sarsembayev-eldar-student-api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:19:38.918Z  INFO 1 --- [sarsembayev-eldar-student-api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:19:39.184Z  WARN 1 --- [sarsembayev-eldar-student-api] [nio-8080-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:19:39.184Z ERROR 1 --- [sarsembayev-eldar-student-api] [nio-8080-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "uk_students_email"
+sarsembayev-eldar-student-api-app  |   Detail: Key (email)=(eldar.62ace897f4@example.com) already exists.
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:19:55.953Z  INFO 1 --- [sarsembayev-eldar-student-api] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:19:55.955Z  INFO 1 --- [sarsembayev-eldar-student-api] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:19:55.959Z  INFO 1 --- [sarsembayev-eldar-student-api] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:19:55.960Z  INFO 1 --- [sarsembayev-eldar-student-api] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:19:55.962Z  INFO 1 --- [sarsembayev-eldar-student-api] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+sarsembayev-eldar-student-api-app  | 
+sarsembayev-eldar-student-api-app  |   .   ____          _            __ _ _
+sarsembayev-eldar-student-api-app  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+sarsembayev-eldar-student-api-app  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+sarsembayev-eldar-student-api-app  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+sarsembayev-eldar-student-api-app  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+sarsembayev-eldar-student-api-app  |  =========|_|==============|___/=/_/_/_/
+sarsembayev-eldar-student-api-app  | 
+sarsembayev-eldar-student-api-app  |  :: Spring Boot ::               (v3.5.16)
+sarsembayev-eldar-student-api-app  | 
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:32.329Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] k.iitu.studentapi.StudentApiApplication  : Starting StudentApiApplication v1.0.0 using Java 21.0.12.1 with PID 1 (/app/app.jar started by studentapi in /app)
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:32.331Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] k.iitu.studentapi.StudentApiApplication  : No active profile set, falling back to 1 default profile: "default"
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:32.944Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:32.974Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:33.261Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:33.270Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:33.270Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:33.285Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:33.286Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 927 ms
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:33.479Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:33.517Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:33.536Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:33.648Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:33.661Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:33.753Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@129b69b2
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:33.754Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:33.789Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+sarsembayev-eldar-student-api-app  | 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+sarsembayev-eldar-student-api-app  | 	Database driver: undefined/unknown
+sarsembayev-eldar-student-api-app  | 	Database version: 17.11
+sarsembayev-eldar-student-api-app  | 	Autocommit mode: undefined/unknown
+sarsembayev-eldar-student-api-app  | 	Isolation level: undefined/unknown
+sarsembayev-eldar-student-api-app  | 	Minimum pool size: undefined/unknown
+sarsembayev-eldar-student-api-app  | 	Maximum pool size: undefined/unknown
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:34.117Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:34.160Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:34.544Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:34.581Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:34.588Z  INFO 1 --- [sarsembayev-eldar-student-api] [           main] k.iitu.studentapi.StudentApiApplication  : Started StudentApiApplication in 2.577 seconds (process running for 3.015)
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:57.861Z  INFO 1 --- [sarsembayev-eldar-student-api] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:57.861Z  INFO 1 --- [sarsembayev-eldar-student-api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+sarsembayev-eldar-student-api-app  | 2026-10-29T16:20:57.861Z  INFO 1 --- [sarsembayev-eldar-student-api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+$ docker inspect sarsembayev-eldar-student-api-app --format Image={{.Config.Image}} User={{.Config.User}} Network={{json .NetworkSettings.Networks}}
+Image=sarsembayev-eldar-student-api:v1.0-sarsembayev-eldar-37006 User=studentapi Network={"sarsembayev-eldar-student-api_student-network":{"IPAMConfig":null,"Links":null,"Aliases":["sarsembayev-eldar-student-api-app","app"],"DriverOpts":null,"GwPriority":0,"NetworkID":"0c9b06f833f84b7321836ace16a2504361d7a4e763855e31af067d3d4e584000","EndpointID":"c15f4c3ec81de6e6fed653db3f42e90405b8cc5e421c992ced51344cbbcbbe6c","Gateway":"172.18.0.1","IPAddress":"172.18.0.2","MacAddress":"f2:04:08:3a:e2:b6","IPPrefixLen":16,"IPv6Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"DNSNames":["sarsembayev-eldar-student-api-app","app","818b85d17af1"]}}
+$ docker compose exec -T app sh -c id; java -version; ls -l /app/app.jar
+uid=999(studentapi) gid=999(studentapi) groups=999(studentapi)
+openjdk version "21.0.12.1" 2026-08-18 LTS
+OpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)
+-rw-r--r-- 1 studentapi studentapi 56725593 Oct 29 16:19 /app/app.jar
+$ docker compose stop app
+ Container sarsembayev-eldar-student-api-app Stopping 
+ Container sarsembayev-eldar-student-api-app Stopped 
+$ docker compose start app
+ Container sarsembayev-eldar-student-api-db Waiting 
+ Container sarsembayev-eldar-student-api-db Healthy 
+ Container sarsembayev-eldar-student-api-app Starting 
+ Container sarsembayev-eldar-student-api-app Started 
+$ bash scripts/wait_for_api.sh
+PASS: API is ready at http://127.0.0.1:8083/actuator/health
+GET /api/sarsembayev-eldar/students/3 -> 200
+{"id":3,"firstName":"Eldar","lastName":"Sarsembayev","email":"persistence.37006.1793290857@example.com","groupName":"IT2-2301"}
+$ docker compose restart
+ Container sarsembayev-eldar-student-api-db Restarting 
+ Container sarsembayev-eldar-student-api-app Restarting 
+ Container sarsembayev-eldar-student-api-app Started 
+ Container sarsembayev-eldar-student-api-db Started 
+$ bash scripts/wait_for_api.sh
+PASS: API is ready at http://127.0.0.1:8083/actuator/health
+GET /api/sarsembayev-eldar/students/3 -> 200
+{"id":3,"firstName":"Eldar","lastName":"Sarsembayev","email":"persistence.37006.1793290857@example.com","groupName":"IT2-2301"}
+PASS: student persisted through app stop/start and both-service restart
+$ docker compose down
+ Container sarsembayev-eldar-student-api-app Stopping 
+ Container sarsembayev-eldar-student-api-app Stopped 
+ Container sarsembayev-eldar-student-api-app Removing 
+ Container sarsembayev-eldar-student-api-app Removed 
+ Container sarsembayev-eldar-student-api-db Stopping 
+ Container sarsembayev-eldar-student-api-db Stopped 
+ Container sarsembayev-eldar-student-api-db Removing 
+ Container sarsembayev-eldar-student-api-db Removed 
+ Network sarsembayev-eldar-student-api_student-network Removing 
+ Network sarsembayev-eldar-student-api_student-network Removed 
+$ docker compose up -d
+ Network sarsembayev-eldar-student-api_student-network Creating 
+ Network sarsembayev-eldar-student-api_student-network Creating 
+ Network sarsembayev-eldar-student-api_student-network Created 
+ Network sarsembayev-eldar-student-api_student-network Created 
+ Container sarsembayev-eldar-student-api-db Creating 
+ Container sarsembayev-eldar-student-api-db Created 
+ Container sarsembayev-eldar-student-api-app Creating 
+ Container sarsembayev-eldar-student-api-app Created 
+ Container sarsembayev-eldar-student-api-db Starting 
+ Container sarsembayev-eldar-student-api-db Started 
+ Container sarsembayev-eldar-student-api-db Waiting 
+ Container sarsembayev-eldar-student-api-db Healthy 
+ Container sarsembayev-eldar-student-api-app Starting 
+ Container sarsembayev-eldar-student-api-app Started 
+$ bash scripts/wait_for_api.sh
+PASS: API is ready at http://127.0.0.1:8083/actuator/health
+GET /api/sarsembayev-eldar/students/3 -> 200
+{"id":3,"firstName":"Eldar","lastName":"Sarsembayev","email":"persistence.37006.1793290857@example.com","groupName":"IT2-2301"}
+PASS: student persisted after removing and recreating both containers (volume retained)
+$ docker compose exec -T db sh -c psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT id, first_name, last_name, email, group_name FROM students ORDER BY id;"
+ id | first_name |  last_name  |                  email                   | group_name 
+----+------------+-------------+------------------------------------------+------------
+  3 | Eldar      | Sarsembayev | persistence.37006.1793290857@example.com | IT2-2301
+(1 row)
+
+$ docker image inspect sarsembayev-eldar-student-api:v1.0-sarsembayev-eldar-37006 --format ID={{.Id}} Size={{.Size}} Created={{.Created}}
+ID=sha256:32c2594662c3a8697d6101e575536c9088011455bca836eac1819933094dd5c6 Size=511046134 Created=2026-10-29T21:19:28.21411569+05:00
+$ docker compose ps
+NAME                                IMAGE                                                        COMMAND                  SERVICE   CREATED         STATUS                   PORTS
+sarsembayev-eldar-student-api-app   sarsembayev-eldar-student-api:v1.0-sarsembayev-eldar-37006   "java -XX:MaxRAMPerc…"   app       8 seconds ago   Up 4 seconds             127.0.0.1:8083->8080/tcp
+sarsembayev-eldar-student-api-db    postgres:17-alpine                                           "docker-entrypoint.s…"   db        8 seconds ago   Up 8 seconds (healthy)   5432/tcp
