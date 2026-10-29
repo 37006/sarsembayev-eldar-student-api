@@ -37,6 +37,15 @@ def main():
         assert request('PUT', item, updated)['groupName'] == updated['groupName']
         assert request('GET', item)['groupName'] == updated['groupName']
         request('POST', PATH, sample, 409)
+        request('POST', PATH, dict(sample, email=sample['email'].upper()), 409)
+        second_data = dict(sample, email=f'other.{uuid4().hex[:10]}@example.com')
+        second = request('POST', PATH, second_data, 201)
+        second_item = PATH + '/' + str(second['id'])
+        try:
+            request('PUT', second_item, sample, 409)
+            assert request('GET', second_item)['email'] == second_data['email']
+        finally:
+            request('DELETE', second_item, expected=204)
         request('POST', PATH, dict(sample, email='invalid'), 400)
         request('PUT', PATH + '/999999999', sample, 404)
         request('GET', PATH + '/abc', expected=400)

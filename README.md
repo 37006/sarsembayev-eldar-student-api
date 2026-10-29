@@ -56,3 +56,7 @@ The CRUD feature includes automated checks for successful updates, missing IDs, 
 - `evidence/`: real command transcripts, API responses and Jenkins records.
 
 No separate PDF report or mandatory video is specified in this Midterm task. The code, GitHub history and actual demonstrations are the primary results.
+
+## Automatic CI verification
+
+The Jenkins job `Sarsembayev_Eldar_Student_API` checks GitHub once per minute using Poll SCM. After a commit reaches main, Jenkins checks out that revision and runs all five stages. The build cause distinguishes an SCM-triggered run from a manual Build Now run. The PostgreSQL smoke check also verifies case-insensitive email uniqueness and rollback when an update would reuse another student's email.
