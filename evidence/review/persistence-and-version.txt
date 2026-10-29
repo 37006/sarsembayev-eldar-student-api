@@ -1,0 +1,2 @@
+PASS: original PostgreSQL record survived upgrade to 1.0.2 and restart
+{"studentId": "37006", "student": "Eldar Sarsembayev", "application": "Sarsembayev Eldar Student API", "version": "1.0.2", "group": "IT2-2301", "students": "/api/sarsembayev-eldar/students"}

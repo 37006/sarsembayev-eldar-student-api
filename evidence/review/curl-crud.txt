@@ -1,0 +1,58 @@
+Student: Eldar Sarsembayev | IT2-2301 | 37006
+
+POST http://127.0.0.1:8083/api/sarsembayev-eldar/students
+HTTP/1.1 201 
+Location: /api/sarsembayev-eldar/students/26
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 29 Oct 2026 17:35:06 GMT
+
+{"id":26,"firstName":"Eldar","lastName":"Sarsembayev","email":"eldar.37006.6871897210a047808bb56b3cd98bec4c@example.com","groupName":"IT2-2301"}
+
+GET http://127.0.0.1:8083/api/sarsembayev-eldar/students
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 29 Oct 2026 17:35:06 GMT
+
+[{"id":3,"firstName":"Eldar","lastName":"Sarsembayev","email":"persistence.37006.1793290857@example.com","groupName":"IT2-2301"},{"id":26,"firstName":"Eldar","lastName":"Sarsembayev","email":"eldar.37006.6871897210a047808bb56b3cd98bec4c@example.com","groupName":"IT2-2301"}]
+
+GET http://127.0.0.1:8083/api/sarsembayev-eldar/students/26
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 29 Oct 2026 17:35:06 GMT
+
+{"id":26,"firstName":"Eldar","lastName":"Sarsembayev","email":"eldar.37006.6871897210a047808bb56b3cd98bec4c@example.com","groupName":"IT2-2301"}
+
+PUT http://127.0.0.1:8083/api/sarsembayev-eldar/students/26
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 29 Oct 2026 17:35:06 GMT
+
+{"id":26,"firstName":"Eldar","lastName":"Sarsembayev","email":"eldar.37006.6871897210a047808bb56b3cd98bec4c@example.com","groupName":"IT2-2301-UPDATED"}
+
+GET http://127.0.0.1:8083/api/sarsembayev-eldar/students/26
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 29 Oct 2026 17:35:06 GMT
+
+{"id":26,"firstName":"Eldar","lastName":"Sarsembayev","email":"eldar.37006.6871897210a047808bb56b3cd98bec4c@example.com","groupName":"IT2-2301-UPDATED"}
+
+DELETE http://127.0.0.1:8083/api/sarsembayev-eldar/students/26
+HTTP/1.1 204 
+Date: Thu, 29 Oct 2026 17:35:06 GMT
+
+
+
+GET http://127.0.0.1:8083/api/sarsembayev-eldar/students/26
+HTTP/1.1 404 
+Content-Type: application/problem+json
+Transfer-Encoding: chunked
+Date: Thu, 29 Oct 2026 17:35:07 GMT
+
+{"type":"about:blank","title":"Not Found","status":404,"detail":"Student with ID 26 was not found","instance":"/api/sarsembayev-eldar/students/26"}
+
+PASS: curl create/list/get/update/delete/not-found demonstration

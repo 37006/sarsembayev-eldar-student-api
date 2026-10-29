@@ -1,0 +1,4 @@
+ Container sarsembayev-eldar-student-api-db Restarting 
+ Container sarsembayev-eldar-student-api-app Restarting 
+ Container sarsembayev-eldar-student-api-db Started 
+ Container sarsembayev-eldar-student-api-app Started 

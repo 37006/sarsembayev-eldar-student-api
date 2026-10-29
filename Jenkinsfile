@@ -8,13 +8,20 @@ pipeline {
     }
     triggers { pollSCM('* * * * *') }
     environment {
-        IMAGE = 'sarsembayev-eldar-student-api:v1.0.1-sarsembayev-eldar-37006'
+        IMAGE_REPOSITORY = 'sarsembayev-eldar-student-api'
+        RELEASE_TAG = 'v1.0.2-sarsembayev-eldar-37006'
     }
     stages {
         stage('Checkout') {
             steps {
                 checkout scm
-                sh 'printf "Student: Eldar Sarsembayev | IT2-2301 | 37006\\n"; git rev-parse HEAD; java -version; docker version --format "{{.Server.Version}}"'
+                script {
+                    def revision = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
+                    env.IMAGE = env.JOB_NAME == 'Sarsembayev_Eldar_Student_API'
+                        ? "${env.IMAGE_REPOSITORY}:${env.RELEASE_TAG}"
+                        : "${env.IMAGE_REPOSITORY}:ci-${env.BUILD_NUMBER}-${revision}-37006"
+                }
+                sh 'set -eu; printf "Student: Eldar Sarsembayev | IT2-2301 | 37006\\nImage: %s\\n" "$IMAGE"; git rev-parse HEAD; java -version; docker version --format "{{.Server.Version}}"'
             }
         }
         stage('Build') {

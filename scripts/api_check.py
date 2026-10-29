@@ -8,6 +8,10 @@ import urllib.error
 BASE = os.environ.get('API_URL', 'http://127.0.0.1:8083')
 PATH = '/api/sarsembayev-eldar/students'
 
+def require(condition, message):
+    if not condition:
+        raise AssertionError(message)
+
 def request(method, path, body=None, expected=200):
     data = None if body is None else json.dumps(body).encode()
     req = urllib.request.Request(BASE + path, data=data, method=method,
@@ -19,7 +23,7 @@ def request(method, path, body=None, expected=200):
     with response:
         status, raw = response.status, response.read().decode()
         print(f'{method} {path} -> {status}\n{raw}')
-        assert status == expected, (method, path, expected, status, raw)
+        require(status == expected, (method, path, expected, status, raw))
         return json.loads(raw) if raw else None
 
 def main():
@@ -31,11 +35,11 @@ def main():
     student = request('POST', PATH, sample, 201)
     item = PATH + '/' + str(student['id'])
     try:
-        assert any(s['id'] == student['id'] for s in request('GET', PATH))
-        assert request('GET', item)['lastName'] == 'Sarsembayev'
+        require(any(s['id'] == student['id'] for s in request('GET', PATH)), 'Created student missing from the list')
+        require(request('GET', item)['lastName'] == 'Sarsembayev', 'Retrieved the wrong student')
         updated = dict(sample, groupName='IT2-2301-UPDATED')
-        assert request('PUT', item, updated)['groupName'] == updated['groupName']
-        assert request('GET', item)['groupName'] == updated['groupName']
+        require(request('PUT', item, updated)['groupName'] == updated['groupName'], 'PUT returned the wrong group')
+        require(request('GET', item)['groupName'] == updated['groupName'], 'Updated group was not persisted')
         request('POST', PATH, sample, 409)
         request('POST', PATH, dict(sample, email=sample['email'].upper()), 409)
         second_data = dict(sample, email=f'other.{uuid4().hex[:10]}@example.com')
@@ -43,7 +47,7 @@ def main():
         second_item = PATH + '/' + str(second['id'])
         try:
             request('PUT', second_item, sample, 409)
-            assert request('GET', second_item)['email'] == second_data['email']
+            require(request('GET', second_item)['email'] == second_data['email'], 'Conflicting update changed the existing email')
         finally:
             request('DELETE', second_item, expected=204)
         request('POST', PATH, dict(sample, email='invalid'), 400)

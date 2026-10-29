@@ -37,7 +37,7 @@ Evidence filenames in the table are relative to `evidence/`. The final status of
 
 ## Verified application results
 
-The final local Gradle run executed 17 tests with 0 failures and 0 errors. These tests use H2 in PostgreSQL compatibility mode so they can run independently in Jenkins. I separately checked the real PostgreSQL-backed application with HTTP requests; H2 results alone are not used as proof of PostgreSQL operation.
+The final local Gradle run executed 31 tests with 0 failures and 0 errors. These tests use H2 in PostgreSQL compatibility mode so they can run independently in Jenkins. I separately checked the real PostgreSQL-backed application with HTTP requests; H2 results alone are not used as proof of PostgreSQL operation.
 
 The persistence demonstration created a record containing my name, retained its generated ID and retrieved the same record after app stop/start, both-service restart, Compose down/up without deleting the volume, and rebuilding the application. The retained sample is identified in `persistence-student.json`. Other API smoke-test records are removed by their test scripts.
 
@@ -49,7 +49,7 @@ The README conflict occurred because the documentation branch and main changed t
 
 The controlled CI error belongs only to `test/sarsembayev-eldar-pipeline`. It changes the expected response to an invalid email from 400 to 201. The application correctly returns 400, so the deliberately incorrect test fails. Correcting the expectation to 400 fixes the test. The main application does not need to be broken to demonstrate Pipeline failure.
 
-The main branch has 17 automated tests. The isolated troubleshooting branch adds one test: its first run completed 18 tests with one deliberately failing assertion, and the corrected run completed successfully. The failed console explicitly records that Docker Build and Verify were skipped. The archived XML files are included under `evidence/jenkins-test-results/`.
+The original main branch had 17 automated tests. Its isolated troubleshooting branch added one test: the recorded first run completed 18 tests with one deliberately failing assertion, and the corrected run completed successfully. The failed console explicitly records that Docker Build and Verify were skipped. These historical XML files are included under `evidence/jenkins-test-results/`. The reviewed release now has 31 main-branch tests; the current test branch additionally includes the corrected troubleshooting test.
 
 The automatically triggered main build was started by `hudson.triggers.SCMTrigger$SCMTriggerCause`. Its saved result identifies the checked-out Git revision, and its console finishes with SUCCESS. This verifies the configured polling trigger through an actual GitHub change rather than a manual Build Now request.
 
@@ -58,6 +58,20 @@ The automatically triggered main build was started by `hudson.triggers.SCMTrigge
 The local database password is generated into a mode-600 `.env`. It is excluded by Git and the Docker build context, and is not included in the submission archive. No Jenkins password or GitHub token belongs in the source files or evidence. Passwords must not be committed because Git preserves previous versions and other users or automated systems could retrieve them later.
 
 The application is published only on loopback port 8083. PostgreSQL is available only on the dedicated Docker network. A successful database health check allows Compose to start the app; the HTTP readiness script then checks the application itself. A Docker network connects services; the named volume retains database files when containers are replaced.
+
+## Review and corrected release 1.0.2
+
+I repeated the specification check and tested inputs beyond the original happy path. Three input problems were reproduced against the running PostgreSQL-backed API: a JSON number was converted into a name, Unicode whitespace was trimmed into an empty value only after validation, and Unicode lowercasing could expand an email beyond the database field limit and produce a misleading duplicate-email response.
+
+The request record now normalizes Unicode whitespace and email case before Bean Validation. Jackson rejects numbers and booleans where the JSON contract requires strings. Only a violation of the named email uniqueness constraint is reported as a duplicate email; an unrelated integrity error is a server error and does not claim that an email already exists.
+
+The new regression tests were run before the fix: 10 of the 11 initial regression cases failed. After correction, the complete suite has 31 passing tests. PostgreSQL checks also cover invalid updates leaving the existing name unchanged and four concurrent requests for one email, which must produce one 201 and three 409 responses. The curl demonstration now verifies every expected HTTP status and the updated record instead of relying only on curl's HTTP-error handling. Its test email is random to avoid collisions between repeated runs, and its own record is cleaned up on exit.
+
+The current application version is 1.0.2, with release image `sarsembayev-eldar-student-api:v1.0.2-sarsembayev-eldar-37006`. The original persistence record survived this upgrade and another service restart. The personal Linux demonstration explicitly empties its latest report log before regenerating it, so its displayed initial size is accurate on repeated runs.
+
+Jenkins test jobs now use separate `ci-...-37006` image tags. They cannot overwrite the main release image tag. The historical failed/fixed Pipeline records above are retained, and the reviewed test branch is built again to verify this isolation.
+
+Current review evidence is in `evidence/review/`: `input-before.jsonl`, `regressions-before.txt`, `gradle-tests.txt`, `docker-1.0.2-build.txt`, `api-postgresql.txt`, `regression-api.txt`, `curl-crud.txt`, `linux-administration.txt` and `persistence-and-version.txt`. The before-fix failures are historical regression evidence, not the current test result.
 
 ## Required explanations
 
@@ -75,7 +89,7 @@ Submit the personal GitHub repository URL and the final project archive containi
 
 Repository: https://github.com/37006/sarsembayev-eldar-student-api
 
-Source revision when this report was generated: `e7282347d411b0cda530193e986b057eb7ddf7dc`. A later documentation-only commit may contain this report and the evidence itself.
+Source revision when this report was generated: `c3e281f1cfa31cfedd40205383ecee4e048f75ab`. A later documentation-only commit may contain this report and the evidence itself.
 
 ## References
 

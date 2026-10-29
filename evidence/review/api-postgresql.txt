@@ -1,0 +1,39 @@
+GET / -> 200
+{"application":"Sarsembayev Eldar Student API","version":"1.0.2","group":"IT2-2301","students":"/api/sarsembayev-eldar/students","studentId":"37006","student":"Eldar Sarsembayev"}
+GET /actuator/health -> 200
+{"status":"UP"}
+POST /api/sarsembayev-eldar/students -> 201
+{"id":17,"firstName":"Eldar","lastName":"Sarsembayev","email":"eldar.5c862fa2fe@example.com","groupName":"IT2-2301"}
+GET /api/sarsembayev-eldar/students -> 200
+[{"id":3,"firstName":"Eldar","lastName":"Sarsembayev","email":"persistence.37006.1793290857@example.com","groupName":"IT2-2301"},{"id":17,"firstName":"Eldar","lastName":"Sarsembayev","email":"eldar.5c862fa2fe@example.com","groupName":"IT2-2301"}]
+GET /api/sarsembayev-eldar/students/17 -> 200
+{"id":17,"firstName":"Eldar","lastName":"Sarsembayev","email":"eldar.5c862fa2fe@example.com","groupName":"IT2-2301"}
+PUT /api/sarsembayev-eldar/students/17 -> 200
+{"id":17,"firstName":"Eldar","lastName":"Sarsembayev","email":"eldar.5c862fa2fe@example.com","groupName":"IT2-2301-UPDATED"}
+GET /api/sarsembayev-eldar/students/17 -> 200
+{"id":17,"firstName":"Eldar","lastName":"Sarsembayev","email":"eldar.5c862fa2fe@example.com","groupName":"IT2-2301-UPDATED"}
+POST /api/sarsembayev-eldar/students -> 409
+{"type":"about:blank","title":"Conflict","status":409,"detail":"A student with this email already exists","instance":"/api/sarsembayev-eldar/students"}
+POST /api/sarsembayev-eldar/students -> 409
+{"type":"about:blank","title":"Conflict","status":409,"detail":"A student with this email already exists","instance":"/api/sarsembayev-eldar/students"}
+POST /api/sarsembayev-eldar/students -> 201
+{"id":20,"firstName":"Eldar","lastName":"Sarsembayev","email":"other.68119cacac@example.com","groupName":"IT2-2301"}
+PUT /api/sarsembayev-eldar/students/20 -> 409
+{"type":"about:blank","title":"Conflict","status":409,"detail":"A student with this email already exists","instance":"/api/sarsembayev-eldar/students/20"}
+GET /api/sarsembayev-eldar/students/20 -> 200
+{"id":20,"firstName":"Eldar","lastName":"Sarsembayev","email":"other.68119cacac@example.com","groupName":"IT2-2301"}
+DELETE /api/sarsembayev-eldar/students/20 -> 204
+
+POST /api/sarsembayev-eldar/students -> 400
+{"type":"about:blank","title":"Bad Request","status":400,"detail":"Check the student fields","instance":"/api/sarsembayev-eldar/students","errors":{"email":"must be a well-formed email address"}}
+PUT /api/sarsembayev-eldar/students/999999999 -> 404
+{"type":"about:blank","title":"Not Found","status":404,"detail":"Student with ID 999999999 was not found","instance":"/api/sarsembayev-eldar/students/999999999"}
+GET /api/sarsembayev-eldar/students/abc -> 400
+{"type":"about:blank","title":"Bad Request","status":400,"detail":"The request contains malformed JSON, an invalid field type or an invalid student ID","instance":"/api/sarsembayev-eldar/students/abc"}
+DELETE /api/sarsembayev-eldar/students/17 -> 204
+
+GET /api/sarsembayev-eldar/students/17 -> 404
+{"type":"about:blank","title":"Not Found","status":404,"detail":"Student with ID 17 was not found","instance":"/api/sarsembayev-eldar/students/17"}
+DELETE /api/sarsembayev-eldar/students/17 -> 404
+{"type":"about:blank","title":"Not Found","status":404,"detail":"Student with ID 17 was not found","instance":"/api/sarsembayev-eldar/students/17"}
+PASS: real PostgreSQL CRUD and error responses

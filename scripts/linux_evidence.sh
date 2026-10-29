@@ -2,7 +2,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 mkdir -p scripts logs backups src evidence
-touch logs/Sarsembayev_Eldar_system_report.log
+: > logs/Sarsembayev_Eldar_system_report.log
 printf 'Initial log size: '; wc -c < logs/Sarsembayev_Eldar_system_report.log
 find . -maxdepth 2 -not -path './.git*' -not -path './.gradle*' -not -path './build*' | sort
 for file in Dockerfile docker-compose.yml Jenkinsfile build.gradle README.md scripts/Sarsembayev_Eldar_system_report.sh; do test -f "$file"; done
