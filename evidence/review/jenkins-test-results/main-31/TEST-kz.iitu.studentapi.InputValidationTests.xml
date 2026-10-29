@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kz.iitu.studentapi.InputValidationTests" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-29T17:38:13.339Z" hostname="SystemX" time="0.509">
+  <properties/>
+  <testcase name="acceptsInternationalNames()" classname="kz.iitu.studentapi.InputValidationTests" time="0.355"/>
+  <testcase name="duplicatePaddedEmailReturns409()" classname="kz.iitu.studentapi.InputValidationTests" time="0.019"/>
+  <testcase name="normalizesAllFieldsBeforeValidation()" classname="kz.iitu.studentapi.InputValidationTests" time="0.006"/>
+  <testcase name="[1] scalar=123" classname="kz.iitu.studentapi.InputValidationTests" time="0.055"/>
+  <testcase name="[2] scalar=12.5" classname="kz.iitu.studentapi.InputValidationTests" time="0.007"/>
+  <testcase name="[3] scalar=true" classname="kz.iitu.studentapi.InputValidationTests" time="0.005"/>
+  <testcase name="rejectsEmailWhoseLowercaseFormIsTooLong()" classname="kz.iitu.studentapi.InputValidationTests" time="0.011"/>
+  <testcase name="rejectsNonBreakingWhitespaceName()" classname="kz.iitu.studentapi.InputValidationTests" time="0.005"/>
+  <testcase name="[1] field=firstName" classname="kz.iitu.studentapi.InputValidationTests" time="0.007"/>
+  <testcase name="[2] field=lastName" classname="kz.iitu.studentapi.InputValidationTests" time="0.006"/>
+  <testcase name="[3] field=groupName" classname="kz.iitu.studentapi.InputValidationTests" time="0.006"/>
+  <testcase name="invalidUpdateDoesNotEraseTheExistingName()" classname="kz.iitu.studentapi.InputValidationTests" time="0.012"/>
+  <system-out><![CDATA[22:38:11.399 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [kz.iitu.studentapi.InputValidationTests]: InputValidationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:38:11.464 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration kz.iitu.studentapi.StudentApiApplication for test class kz.iitu.studentapi.InputValidationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-10-29T22:38:11.656+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] k.iitu.studentapi.InputValidationTests   : Starting InputValidationTests using Java 21.0.12.1 with PID 59573 (started by jenkins in /var/lib/jenkins/workspace/Sarsembayev_Eldar_Student_API)
+2026-10-29T22:38:11.657+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] k.iitu.studentapi.InputValidationTests   : The following 1 profile is active: "test"
+2026-10-29T22:38:12.030+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-29T22:38:12.053+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interface.
+2026-10-29T22:38:12.267+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-29T22:38:12.284+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-10-29T22:38:12.296+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-29T22:38:12.383+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-29T22:38:12.394+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-29T22:38:12.463+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:student_api user=SA
+2026-10-29T22:38:12.465+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-29T22:38:12.489+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-29T22:38:12.768+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-29T22:38:12.781+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-29T22:38:13.244+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-29T22:38:13.244+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-29T22:38:13.248+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-10-29T22:38:13.254+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 8 ms
+2026-10-29T22:38:13.288+05:00  INFO 59573 --- [sarsembayev-eldar-student-api] [    Test worker] k.iitu.studentapi.InputValidationTests   : Started InputValidationTests in 1.775 seconds (process running for 2.285)
+2026-10-29T22:38:13.703+05:00  WARN 59573 --- [sarsembayev-eldar-student-api] [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2026-10-29T22:38:13.703+05:00 ERROR 59573 --- [sarsembayev-eldar-student-api] [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.UK_STUDENTS_EMAIL_INDEX_9 ON PUBLIC.STUDENTS(EMAIL NULLS FIRST) VALUES ( /* 2 */ '37006@iitu.edu.kz' )"; SQL statement:
+insert into students (email,first_name,group_name,last_name,id) values (?,?,?,?,default) [23505-232]
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/var/lib/jenkins/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.8/f09415827a71be7ed621c7bd02550678f28bc81c/byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

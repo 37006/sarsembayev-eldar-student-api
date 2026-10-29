@@ -1,0 +1,4 @@
+PASS: test branch used sarsembayev-eldar-student-api:ci-3-22aa821-37006
+PASS: protected release image still matches the successful main Pipeline: sha256:1f0bbad565df55cc8a93aaa3702faf9730dc194ba834e75b12390df62703d99c
+PASS: main-31 4 31 tests
+PASS: test-32 3 32 tests

@@ -1,0 +1,18 @@
+{
+  "mainImage": "sha256:1f0bbad565df55cc8a93aaa3702faf9730dc194ba834e75b12390df62703d99c",
+  "testImageReference": "sarsembayev-eldar-student-api:ci-3-22aa821-37006",
+  "results": {
+    "main-31": {
+      "job": "Sarsembayev_Eldar_Student_API",
+      "build": 4,
+      "tests": 31,
+      "result": "SUCCESS"
+    },
+    "test-32": {
+      "job": "Sarsembayev_Eldar_Student_API_Troubleshooting",
+      "build": 3,
+      "tests": 32,
+      "result": "SUCCESS"
+    }
+  }
+}

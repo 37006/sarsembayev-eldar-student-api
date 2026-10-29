@@ -71,7 +71,7 @@ The current application version is 1.0.2, with release image `sarsembayev-eldar-
 
 Jenkins test jobs now use separate `ci-...-37006` image tags. They cannot overwrite the main release image tag. The historical failed/fixed Pipeline records above are retained, and the reviewed test branch is built again to verify this isolation.
 
-Current review evidence is in `evidence/review/`: `input-before.jsonl`, `regressions-before.txt`, `gradle-tests.txt`, `docker-1.0.2-build.txt`, `api-postgresql.txt`, `regression-api.txt`, `curl-crud.txt`, `linux-administration.txt` and `persistence-and-version.txt`. The before-fix failures are historical regression evidence, not the current test result.
+Current review evidence is in `evidence/review/`: `input-before.jsonl`, `regressions-before.txt`, `gradle-tests.txt`, `docker-1.0.2-build.txt`, `api-postgresql.txt`, `regression-api.txt`, `curl-crud.txt`, `linux-administration.txt` and `persistence-and-version.txt`. `jenkins-main-result.json` records the successful reviewed main build; `jenkins-test-isolation-result.json` records the successful reviewed test branch. The XML files under `jenkins-test-results/` contain 31 passing main tests and 32 passing test-branch tests. `ci-image-isolation.json` records the distinct test tag and the unchanged main image ID. The before-fix failures are historical regression evidence, not the current test result.
 
 ## Required explanations
 
@@ -89,7 +89,7 @@ Submit the personal GitHub repository URL and the final project archive containi
 
 Repository: https://github.com/37006/sarsembayev-eldar-student-api
 
-Source revision when this report was generated: `c3e281f1cfa31cfedd40205383ecee4e048f75ab`. A later documentation-only commit may contain this report and the evidence itself.
+Source revision when this report was generated: `ac710bbb870fd6de694971bac7eb223b618c589c`. A later documentation-only commit may contain this report and the evidence itself.
 
 ## References
 

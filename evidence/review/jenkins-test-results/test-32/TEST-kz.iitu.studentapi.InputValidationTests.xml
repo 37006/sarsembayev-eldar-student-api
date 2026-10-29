@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kz.iitu.studentapi.InputValidationTests" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-29T17:39:15.666Z" hostname="SystemX" time="0.211">
+  <properties/>
+  <testcase name="acceptsInternationalNames()" classname="kz.iitu.studentapi.InputValidationTests" time="0.073"/>
+  <testcase name="duplicatePaddedEmailReturns409()" classname="kz.iitu.studentapi.InputValidationTests" time="0.012"/>
+  <testcase name="normalizesAllFieldsBeforeValidation()" classname="kz.iitu.studentapi.InputValidationTests" time="0.006"/>
+  <testcase name="[1] scalar=123" classname="kz.iitu.studentapi.InputValidationTests" time="0.054"/>
+  <testcase name="[2] scalar=12.5" classname="kz.iitu.studentapi.InputValidationTests" time="0.006"/>
+  <testcase name="[3] scalar=true" classname="kz.iitu.studentapi.InputValidationTests" time="0.005"/>
+  <testcase name="rejectsEmailWhoseLowercaseFormIsTooLong()" classname="kz.iitu.studentapi.InputValidationTests" time="0.007"/>
+  <testcase name="rejectsNonBreakingWhitespaceName()" classname="kz.iitu.studentapi.InputValidationTests" time="0.003"/>
+  <testcase name="[1] field=firstName" classname="kz.iitu.studentapi.InputValidationTests" time="0.006"/>
+  <testcase name="[2] field=lastName" classname="kz.iitu.studentapi.InputValidationTests" time="0.005"/>
+  <testcase name="[3] field=groupName" classname="kz.iitu.studentapi.InputValidationTests" time="0.005"/>
+  <testcase name="invalidUpdateDoesNotEraseTheExistingName()" classname="kz.iitu.studentapi.InputValidationTests" time="0.012"/>
+  <system-out><![CDATA[2026-10-29T22:39:15.662+05:00  INFO 61467 --- [sarsembayev-eldar-student-api] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [kz.iitu.studentapi.InputValidationTests]: InputValidationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-29T22:39:15.665+05:00  INFO 61467 --- [sarsembayev-eldar-student-api] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration kz.iitu.studentapi.StudentApiApplication for test class kz.iitu.studentapi.InputValidationTests
+2026-10-29T22:39:15.747+05:00  WARN 61467 --- [sarsembayev-eldar-student-api] [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2026-10-29T22:39:15.747+05:00 ERROR 61467 --- [sarsembayev-eldar-student-api] [    Test worker] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.UK_STUDENTS_EMAIL_INDEX_9 ON PUBLIC.STUDENTS(EMAIL NULLS FIRST) VALUES ( /* 2 */ '37006@iitu.edu.kz' )"; SQL statement:
+insert into students (email,first_name,group_name,last_name,id) values (?,?,?,?,default) [23505-232]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
