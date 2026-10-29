@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kz.iitu.studentapi.ControlledPipelineTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-10-29T17:09:51.450Z" hostname="SystemX" time="0.307">
+  <properties/>
+  <testcase name="invalidEmailIsRejected()" classname="kz.iitu.studentapi.ControlledPipelineTests" time="0.307">
+    <failure message="java.lang.AssertionError: Status expected:&lt;201&gt; but was:&lt;400&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Status expected:&lt;201&gt; but was:&lt;400&gt;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:61)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:128)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:640)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at kz.iitu.studentapi.ControlledPipelineTests.invalidEmailIsRejected(ControlledPipelineTests.java:22)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <system-out><![CDATA[22:09:49.493 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [kz.iitu.studentapi.ControlledPipelineTests]: ControlledPipelineTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:09:49.557 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration kz.iitu.studentapi.StudentApiApplication for test class kz.iitu.studentapi.ControlledPipelineTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-10-29T22:09:49.750+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] k.i.studentapi.ControlledPipelineTests   : Starting ControlledPipelineTests using Java 21.0.12.1 with PID 32806 (started by jenkins in /var/lib/jenkins/workspace/Sarsembayev_Eldar_Student_API_Troubleshooting)
+2026-10-29T22:09:49.750+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] k.i.studentapi.ControlledPipelineTests   : The following 1 profile is active: "test"
+2026-10-29T22:09:50.146+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-29T22:09:50.168+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interface.
+2026-10-29T22:09:50.343+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-29T22:09:50.362+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-10-29T22:09:50.374+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-29T22:09:50.468+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-29T22:09:50.480+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-29T22:09:50.541+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:student_api user=SA
+2026-10-29T22:09:50.542+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-29T22:09:50.567+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-29T22:09:50.849+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-29T22:09:50.863+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-29T22:09:51.363+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-29T22:09:51.363+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-29T22:09:51.367+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-10-29T22:09:51.376+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 13 ms
+2026-10-29T22:09:51.408+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] k.i.studentapi.ControlledPipelineTests   : Started ControlledPipelineTests in 1.795 seconds (process running for 2.288)
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/sarsembayev-eldar/students
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"87"]
+             Body = {"firstName":"Eldar","lastName":"Sarsembayev","email":"invalid","groupName":"IT2-2301"}
+    Session Attrs = {}
+
+Handler:
+             Type = kz.iitu.studentapi.StudentController
+           Method = kz.iitu.studentapi.StudentController#create(StudentRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.bind.MethodArgumentNotValidException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/problem+json"]
+     Content type = application/problem+json
+             Body = {"type":"about:blank","title":"Bad Request","status":400,"detail":"Check the student fields","instance":"/api/sarsembayev-eldar/students","errors":{"email":"must be a well-formed email address"}}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/var/lib/jenkins/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.8/f09415827a71be7ed621c7bd02550678f28bc81c/byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

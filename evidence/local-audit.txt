@@ -1,0 +1,69 @@
+$ git fsck --full
+dangling tree 54f6383ad7b09f588b814cf6c6c4a70939e66a22
+$ docker compose config --quiet
+$ bash -n /home/eldar/devops/sarsembayev-eldar-student-api/scripts/start_linux.sh
+$ bash -n /home/eldar/devops/sarsembayev-eldar-student-api/scripts/Sarsembayev_Eldar_system_report.sh
+$ bash -n /home/eldar/devops/sarsembayev-eldar-student-api/scripts/api_demo_curl.sh
+$ bash -n /home/eldar/devops/sarsembayev-eldar-student-api/scripts/linux_evidence.sh
+$ bash -n /home/eldar/devops/sarsembayev-eldar-student-api/scripts/configure_env.sh
+$ bash -n /home/eldar/devops/sarsembayev-eldar-student-api/scripts/wait_for_api.sh
+PASS: personal report script permissions are 744
+PASS: 17 Gradle integration tests, zero failures and errors
+PASS: Gradle wrapper JAR matches the official SHA-256: 7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172
+$ git rev-list --all
+e7282347d411b0cda530193e986b057eb7ddf7dc
+9641743a75224f8a6dda6bfd6be9d20f2307213f
+3c05874d58dd196bad9c215c27258daf0d7514db
+ae10b6d3283418e6e172c4ab6880934e8a9eee4d
+ebd6e6692416eb169de990eef28a73262b440379
+8001a6616cb7ffb85305a96563ef490528c22165
+09d079db6ddc70592aa2ab8fef2b15d01b900b59
+6edf6b8ceaa358cf934b5485be86f19807cd5ca8
+d2290738f98f05ddf779a8ee372b40e6fed1820b
+75f4fda7edb10a293a1e4608573afbcf2b39832d
+91c4d13d5c10bc3d3eede4255cb95c1edc6f5dd4
+1e39d6e5695d88576e301437bda0defe2aa9abac
+cf6bfa5e22950797b6daf45a6b90ee9903777452
+ff231e801ce50f97f513ad40dcd7d2c16d6e31db
+81d61cb5b58e451ab55765e5fd79f4ff3123617e
+PASS: .env and Jenkins secret files are absent from every Git commit
+$ git check-ignore .env logs/Sarsembayev_Eldar_system_report.log backups/Sarsembayev_Eldar_README_backup.md
+.env
+logs/Sarsembayev_Eldar_system_report.log
+backups/Sarsembayev_Eldar_README_backup.md
+$ git log --graph --oneline --all
+* e728234 Sarsembayev Eldar: verify duplicate email rollback and document automatic CI trigger
+* 3c05874 Sarsembayev Eldar: clarify validation status before CI execution
+* ae10b6d Sarsembayev Eldar: add curl evidence, local launcher and Midterm report
+| * 9641743 Sarsembayev Eldar: fix controlled test to expect HTTP 400 for invalid email
+| * ebd6e66 Sarsembayev Eldar: introduce controlled wrong HTTP expectation on test branch
+|/  
+* 8001a66 Sarsembayev Eldar: record PostgreSQL persistence and reproduction evidence
+* 09d079d Sarsembayev Eldar: release application 1.0.1 with a new personalized image tag
+* 6edf6b8 Sarsembayev Eldar: archive test reports without optional Jenkins plugins
+*   91c4d13 Sarsembayev Eldar: resolve README status conflict retaining both results
+|\  
+| * 75f4fda Sarsembayev Eldar: document API usage on personal branch
+* | ff231e8 Sarsembayev Eldar: record completed CRUD implementation
+|/  
+*   cf6bfa5 Sarsembayev Eldar: merge tested CRUD feature
+|\  
+| * d229073 Sarsembayev Eldar: test update validation and CRUD lifecycle
+| * 1e39d6e Sarsembayev Eldar: implement validated student update operation
+|/  
+* 81d61cb Initial commit: Sarsembayev Eldar Student API
+$ git branch -a
+  feature/sarsembayev-eldar-crud
+  feature/sarsembayev-eldar-documentation
+* main
+  test/sarsembayev-eldar-pipeline
+  remotes/origin/feature/sarsembayev-eldar-crud
+  remotes/origin/feature/sarsembayev-eldar-documentation
+  remotes/origin/main
+  remotes/origin/test/sarsembayev-eldar-pipeline
+$ git tag -n
+v1.0-sarsembayev-eldar Sarsembayev Eldar Student API 1.0.0
+$ git remote -v
+origin	https://github.com/37006/sarsembayev-eldar-student-api.git (fetch)
+origin	https://github.com/37006/sarsembayev-eldar-student-api.git (push)
+PASS: local consistency audit complete

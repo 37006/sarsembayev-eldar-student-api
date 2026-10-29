@@ -1,0 +1,100 @@
+ Image sarsembayev-eldar-student-api:v1.0.2-sarsembayev-eldar-37006 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 607B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 768B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/eclipse-temurin:21-jdk-jammy
+#3 DONE 0.9s
+
+#4 [internal] load metadata for docker.io/library/eclipse-temurin:21-jre-jammy
+#4 DONE 0.9s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 98B done
+#5 DONE 0.0s
+
+#6 [stage-1 1/4] FROM docker.io/library/eclipse-temurin:21-jre-jammy@sha256:9603446cf51296842eab342514857cf7ab55a8891cd564e6c68ec237fae65a16
+#6 resolve docker.io/library/eclipse-temurin:21-jre-jammy@sha256:9603446cf51296842eab342514857cf7ab55a8891cd564e6c68ec237fae65a16 0.0s done
+#6 DONE 0.0s
+
+#7 [build 1/7] FROM docker.io/library/eclipse-temurin:21-jdk-jammy@sha256:4e61d0b3471137e239397789661f6adeaf8db9adcfae45916b22f628c8a32dc0
+#7 resolve docker.io/library/eclipse-temurin:21-jdk-jammy@sha256:4e61d0b3471137e239397789661f6adeaf8db9adcfae45916b22f628c8a32dc0 0.0s done
+#7 DONE 0.0s
+
+#8 [internal] load build context
+#8 transferring context: 15.46kB done
+#8 DONE 0.0s
+
+#9 [build 2/7] WORKDIR /workspace
+#9 CACHED
+
+#10 [build 3/7] COPY gradlew gradlew.bat build.gradle settings.gradle gradle.properties ./
+#10 DONE 0.1s
+
+#11 [build 4/7] COPY gradle ./gradle
+#11 DONE 0.0s
+
+#12 [build 5/7] RUN chmod +x gradlew
+#12 DONE 0.2s
+
+#13 [build 6/7] COPY src ./src
+#13 DONE 0.0s
+
+#14 [build 7/7] RUN --mount=type=cache,id=midterm-gradle,target=/root/.gradle ./gradlew --no-daemon clean test bootJar
+#14 0.804 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+#14 1.403 Daemon will be stopped at the end of the build 
+#14 4.703 > Task :clean UP-TO-DATE
+#14 4.703 > Task :bootBuildInfo
+#14 5.403 > Task :compileJava
+#14 5.403 > Task :processResources
+#14 5.403 > Task :classes
+#14 5.403 > Task :resolveMainClassName
+#14 5.803 > Task :bootJar
+#14 6.103 > Task :compileTestJava
+#14 6.103 > Task :processTestResources
+#14 6.103 > Task :testClasses
+#14 8.703 OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+#14 9.193 2026-10-29T17:34:59.933Z  INFO 160 --- [sarsembayev-eldar-student-api] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+#14 9.193 2026-10-29T17:34:59.934Z  INFO 160 --- [sarsembayev-eldar-student-api] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+#14 9.193 2026-10-29T17:34:59.935Z  INFO 160 --- [sarsembayev-eldar-student-api] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+#14 9.193 > Task :test
+#14 9.193 
+#14 9.193 BUILD SUCCESSFUL in 8s
+#14 9.193 9 actionable tasks: 8 executed, 1 up-to-date
+#14 DONE 9.3s
+
+#15 [stage-1 2/4] WORKDIR /app
+#15 CACHED
+
+#16 [stage-1 3/4] RUN groupadd --system studentapi && useradd --system --gid studentapi --home-dir /app studentapi
+#16 CACHED
+
+#17 [stage-1 4/4] COPY --from=build --chown=studentapi:studentapi /workspace/build/libs/student-api.jar app.jar
+#17 DONE 0.1s
+
+#18 exporting to image
+#18 exporting layers
+#18 exporting layers 0.8s done
+#18 exporting manifest sha256:8b99885c34da7833eff2f39323f5cc2c2730f63bc2278ca4e6b5957121a00d00 done
+#18 exporting config sha256:34d7be11d772cf421f3d1ef4eaf2da35a3c578f24e7f5fc4a3afca6c9bd03abc done
+#18 exporting attestation manifest sha256:dd996eeb4b14d7e3160a737963d737e3c29ae444668534f8d3bd1761ae08ea21 done
+#18 exporting manifest list sha256:825af6e24c34f5fc836edf24dc563762c327d482989c409e827ff78a2d4a296b done
+#18 naming to docker.io/library/sarsembayev-eldar-student-api:v1.0.2-sarsembayev-eldar-37006 done
+#18 unpacking to docker.io/library/sarsembayev-eldar-student-api:v1.0.2-sarsembayev-eldar-37006
+#18 unpacking to docker.io/library/sarsembayev-eldar-student-api:v1.0.2-sarsembayev-eldar-37006 0.2s done
+#18 DONE 1.0s
+
+#19 resolving provenance for metadata file
+#19 DONE 0.0s
+ Image sarsembayev-eldar-student-api:v1.0.2-sarsembayev-eldar-37006 Built 
+ Container sarsembayev-eldar-student-api-db Running 
+ Container sarsembayev-eldar-student-api-app Recreate 
+ Container sarsembayev-eldar-student-api-app Recreated 
+ Container sarsembayev-eldar-student-api-db Waiting 
+ Container sarsembayev-eldar-student-api-db Healthy 
+ Container sarsembayev-eldar-student-api-app Starting 
+ Container sarsembayev-eldar-student-api-app Started 

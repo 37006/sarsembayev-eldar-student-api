@@ -1,0 +1,220 @@
+Started by user Eldar Sarsembayev
+Obtained Jenkinsfile from git https://github.com/37006/sarsembayev-eldar-student-api.git
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/Sarsembayev_Eldar_Student_API
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] timeout
+Timeout set to expire in 20 min
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/37006/sarsembayev-eldar-student-api.git
+ > /usr/bin/git init /var/lib/jenkins/workspace/Sarsembayev_Eldar_Student_API # timeout=10
+Fetching upstream changes from https://github.com/37006/sarsembayev-eldar-student-api.git
+ > /usr/bin/git --version # timeout=10
+ > git --version # 'git version 2.43.0'
+ > /usr/bin/git fetch --tags --force --progress -- https://github.com/37006/sarsembayev-eldar-student-api.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /usr/bin/git config remote.origin.url https://github.com/37006/sarsembayev-eldar-student-api.git # timeout=10
+ > /usr/bin/git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > /usr/bin/git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 3c05874d58dd196bad9c215c27258daf0d7514db (refs/remotes/origin/main)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f 3c05874d58dd196bad9c215c27258daf0d7514db # timeout=10
+Commit message: "Sarsembayev Eldar: clarify validation status before CI execution"
+First time build. Skipping changelog.
+[Pipeline] sh
++ printf Student: Eldar Sarsembayev | IT2-2301 | 37006\n
+Student: Eldar Sarsembayev | IT2-2301 | 37006
++ git rev-parse HEAD
+3c05874d58dd196bad9c215c27258daf0d7514db
++ java -version
+openjdk version "21.0.12.1" 2026-08-18
+OpenJDK Runtime Environment (build 21.0.12.1+1-1-24.04.4-Ubuntu)
+OpenJDK 64-Bit Server VM (build 21.0.12.1+1-1-24.04.4-Ubuntu, mixed mode, sharing)
++ docker version --format {{.Server.Version}}
+29.9.0
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ ./gradlew --no-daemon clean classes testClasses bootJar
+
+Welcome to Gradle 8.14.3!
+
+Here are the highlights of this release:
+ - Java 24 support
+ - GraalVM Native Image toolchain selection
+ - Enhancements to test reporting
+ - Build Authoring improvements
+
+For more details see https://docs.gradle.org/8.14.3/release-notes.html
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean UP-TO-DATE
+> Task :bootBuildInfo
+> Task :compileJava
+> Task :processResources
+> Task :classes
+> Task :compileTestJava
+> Task :processTestResources
+> Task :testClasses
+> Task :resolveMainClassName
+> Task :bootJar
+
+BUILD SUCCESSFUL in 5s
+8 actionable tasks: 7 executed, 1 up-to-date
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] sh
++ ./gradlew --no-daemon test
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :bootBuildInfo
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources UP-TO-DATE
+> Task :testClasses UP-TO-DATE
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-10-29T22:09:03.212+05:00  INFO 31124 --- [sarsembayev-eldar-student-api] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-29T22:09:03.214+05:00  INFO 31124 --- [sarsembayev-eldar-student-api] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-29T22:09:03.215+05:00  INFO 31124 --- [sarsembayev-eldar-student-api] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+> Task :test
+
+BUILD SUCCESSFUL in 6s
+6 actionable tasks: 2 executed, 4 up-to-date
+Post stage
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Docker Build)
+[Pipeline] sh
++ docker build -t sarsembayev-eldar-student-api:v1.0.1-sarsembayev-eldar-37006 .
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 768B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:21-jdk-jammy
+#2 DONE 1.0s
+
+#3 [internal] load metadata for docker.io/library/eclipse-temurin:21-jre-jammy
+#3 DONE 1.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 98B done
+#4 DONE 0.0s
+
+#5 [build 1/7] FROM docker.io/library/eclipse-temurin:21-jdk-jammy@sha256:4e61d0b3471137e239397789661f6adeaf8db9adcfae45916b22f628c8a32dc0
+#5 resolve docker.io/library/eclipse-temurin:21-jdk-jammy@sha256:4e61d0b3471137e239397789661f6adeaf8db9adcfae45916b22f628c8a32dc0 0.0s done
+#5 DONE 0.0s
+
+#6 [stage-1 1/4] FROM docker.io/library/eclipse-temurin:21-jre-jammy@sha256:9603446cf51296842eab342514857cf7ab55a8891cd564e6c68ec237fae65a16
+#6 resolve docker.io/library/eclipse-temurin:21-jre-jammy@sha256:9603446cf51296842eab342514857cf7ab55a8891cd564e6c68ec237fae65a16 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 72.30kB done
+#7 DONE 0.0s
+
+#8 [build 2/7] WORKDIR /workspace
+#8 CACHED
+
+#9 [build 3/7] COPY gradlew gradlew.bat build.gradle settings.gradle gradle.properties ./
+#9 DONE 0.1s
+
+#10 [build 4/7] COPY gradle ./gradle
+#10 DONE 0.0s
+
+#11 [build 5/7] RUN chmod +x gradlew
+#11 DONE 0.2s
+
+#12 [build 6/7] COPY src ./src
+#12 DONE 0.0s
+
+#13 [build 7/7] RUN --mount=type=cache,id=midterm-gradle,target=/root/.gradle ./gradlew --no-daemon clean test bootJar
+#13 0.828 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+#13 1.427 Daemon will be stopped at the end of the build 
+#13 7.369 > Task :clean UP-TO-DATE
+#13 7.369 > Task :bootBuildInfo
+#13 7.968 > Task :compileJava
+#13 7.968 > Task :processResources
+#13 7.968 > Task :classes
+#13 7.968 > Task :resolveMainClassName
+#13 8.368 > Task :bootJar
+#13 8.568 > Task :compileTestJava
+#13 8.568 > Task :processTestResources
+#13 8.569 > Task :testClasses
+#13 11.17 OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+#13 11.47 2026-10-29T17:09:16.549Z  INFO 158 --- [sarsembayev-eldar-student-api] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+#13 11.47 2026-10-29T17:09:16.551Z  INFO 158 --- [sarsembayev-eldar-student-api] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+#13 11.47 2026-10-29T17:09:16.552Z  INFO 158 --- [sarsembayev-eldar-student-api] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+#13 11.52 > Task :test
+#13 11.52 
+#13 11.52 BUILD SUCCESSFUL in 11s
+#13 11.52 9 actionable tasks: 8 executed, 1 up-to-date
+#13 DONE 11.6s
+
+#14 [stage-1 2/4] WORKDIR /app
+#14 CACHED
+
+#15 [stage-1 3/4] RUN groupadd --system studentapi && useradd --system --gid studentapi --home-dir /app studentapi
+#15 CACHED
+
+#16 [stage-1 4/4] COPY --from=build --chown=studentapi:studentapi /workspace/build/libs/student-api.jar app.jar
+#16 DONE 0.1s
+
+#17 exporting to image
+#17 exporting layers
+#17 exporting layers 0.8s done
+#17 exporting manifest sha256:8996dd3a833bdb381468564d5098ee95a15b640ef18680055d2bebdbc141869f done
+#17 exporting config sha256:ec5f96e42d1c6bf306595b3eaf313af78534cc7dab8501d46fa89425911d570b done
+#17 exporting attestation manifest sha256:de8cb3896bb10c834ae39e06ac7115c147908fb10730bcb3666da005e5e1a292 done
+#17 exporting manifest list sha256:9d5bfab89518d35d879d1311a49d307f451507f2f8464e6da8a0533219f7aca5 done
+#17 naming to docker.io/library/sarsembayev-eldar-student-api:v1.0.1-sarsembayev-eldar-37006 done
+#17 unpacking to docker.io/library/sarsembayev-eldar-student-api:v1.0.1-sarsembayev-eldar-37006
+#17 unpacking to docker.io/library/sarsembayev-eldar-student-api:v1.0.1-sarsembayev-eldar-37006 0.2s done
+#17 DONE 1.0s
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Verify)
+[Pipeline] sh
++ set -eu
++ docker image inspect sarsembayev-eldar-student-api:v1.0.1-sarsembayev-eldar-37006 --format Image={{.Id}} Size={{.Size}} Created={{.Created}}
+Image=sha256:9d5bfab89518d35d879d1311a49d307f451507f2f8464e6da8a0533219f7aca5 Size=511045995 Created=2026-10-29T22:09:16.829731873+05:00
++ printf PASS: personalized Docker image exists\n
+PASS: personalized Docker image exists
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+PASS: Eldar Sarsembayev Student API build, tests and image verification
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

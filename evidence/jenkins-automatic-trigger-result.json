@@ -1,0 +1,79 @@
+{
+  "number": 2,
+  "result": "SUCCESS",
+  "duration": 17038,
+  "timestamp": 1793293964883,
+  "url": "http://127.0.0.1:8080/job/Sarsembayev_Eldar_Student_API/2/",
+  "actions": [
+    {
+      "_class": "hudson.model.CauseAction",
+      "causes": [
+        {
+          "_class": "hudson.triggers.SCMTrigger$SCMTriggerCause",
+          "shortDescription": "Started by an SCM change"
+        }
+      ]
+    },
+    {},
+    {
+      "_class": "org.jenkinsci.plugins.workflow.libs.LibrariesAction"
+    },
+    {},
+    {
+      "_class": "hudson.plugins.git.util.BuildData",
+      "buildsByBranchName": {
+        "refs/remotes/origin/main": {
+          "_class": "hudson.plugins.git.util.Build",
+          "buildNumber": 2,
+          "buildResult": null,
+          "marked": {
+            "SHA1": "e7282347d411b0cda530193e986b057eb7ddf7dc",
+            "branch": [
+              {
+                "SHA1": "e7282347d411b0cda530193e986b057eb7ddf7dc",
+                "name": "refs/remotes/origin/main"
+              }
+            ]
+          },
+          "revision": {
+            "SHA1": "e7282347d411b0cda530193e986b057eb7ddf7dc",
+            "branch": [
+              {
+                "SHA1": "e7282347d411b0cda530193e986b057eb7ddf7dc",
+                "name": "refs/remotes/origin/main"
+              }
+            ]
+          }
+        }
+      },
+      "lastBuiltRevision": {
+        "SHA1": "e7282347d411b0cda530193e986b057eb7ddf7dc",
+        "branch": [
+          {
+            "SHA1": "e7282347d411b0cda530193e986b057eb7ddf7dc",
+            "name": "refs/remotes/origin/main"
+          }
+        ]
+      },
+      "remoteUrls": [
+        "https://github.com/37006/sarsembayev-eldar-student-api.git"
+      ],
+      "scmName": ""
+    },
+    {},
+    {},
+    {},
+    {
+      "_class": "org.jenkinsci.plugins.displayurlapi.actions.RunDisplayAction"
+    },
+    {
+      "_class": "org.jenkinsci.plugins.pipeline.modeldefinition.actions.RestartDeclarativePipelineAction"
+    },
+    {},
+    {
+      "_class": "org.jenkinsci.plugins.workflow.job.views.FlowGraphAction"
+    },
+    {},
+    {}
+  ]
+}

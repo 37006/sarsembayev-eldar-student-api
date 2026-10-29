@@ -20,10 +20,10 @@ public class Student {
     protected Student() {}
     public Student(StudentRequest request) { apply(request); }
     public void apply(StudentRequest request) {
-        firstName = request.firstName().strip();
-        lastName = request.lastName().strip();
-        email = request.email().strip().toLowerCase(java.util.Locale.ROOT);
-        groupName = request.groupName().strip();
+        firstName = request.firstName();
+        lastName = request.lastName();
+        email = request.email();
+        groupName = request.groupName();
     }
     public Long getId() { return id; }
     public String getFirstName() { return firstName; }

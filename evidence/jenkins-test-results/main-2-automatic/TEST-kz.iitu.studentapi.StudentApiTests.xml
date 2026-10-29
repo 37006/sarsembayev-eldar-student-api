@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kz.iitu.studentapi.StudentApiTests" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-10-29T17:12:59.185Z" hostname="SystemX" time="0.533">
+  <properties/>
+  <testcase name="unknownStudentReturns404()" classname="kz.iitu.studentapi.StudentApiTests" time="0.319"/>
+  <testcase name="invalidUpdateReturns400()" classname="kz.iitu.studentapi.StudentApiTests" time="0.078"/>
+  <testcase name="updateMissingReturns404()" classname="kz.iitu.studentapi.StudentApiTests" time="0.006"/>
+  <testcase name="missingFieldsReturn400()" classname="kz.iitu.studentapi.StudentApiTests" time="0.004"/>
+  <testcase name="blankNameReturns400()" classname="kz.iitu.studentapi.StudentApiTests" time="0.003"/>
+  <testcase name="emptyListIsValid()" classname="kz.iitu.studentapi.StudentApiTests" time="0.047"/>
+  <testcase name="createsStudentAndLocation()" classname="kz.iitu.studentapi.StudentApiTests" time="0.005"/>
+  <testcase name="oversizedNameReturns400()" classname="kz.iitu.studentapi.StudentApiTests" time="0.005"/>
+  <testcase name="normalizesEmailCase()" classname="kz.iitu.studentapi.StudentApiTests" time="0.005"/>
+  <testcase name="malformedJsonReturns400()" classname="kz.iitu.studentapi.StudentApiTests" time="0.003"/>
+  <testcase name="invalidEmailReturns400()" classname="kz.iitu.studentapi.StudentApiTests" time="0.003"/>
+  <testcase name="deleteMissingReturns404()" classname="kz.iitu.studentapi.StudentApiTests" time="0.004"/>
+  <testcase name="deletesExistingStudent()" classname="kz.iitu.studentapi.StudentApiTests" time="0.009"/>
+  <testcase name="updatesExistingStudent()" classname="kz.iitu.studentapi.StudentApiTests" time="0.011"/>
+  <testcase name="displaysStudentIdentity()" classname="kz.iitu.studentapi.StudentApiTests" time="0.003"/>
+  <testcase name="invalidIdReturns400()" classname="kz.iitu.studentapi.StudentApiTests" time="0.003"/>
+  <testcase name="healthEndpointWorks()" classname="kz.iitu.studentapi.StudentApiTests" time="0.012"/>
+  <system-out><![CDATA[22:12:57.264 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [kz.iitu.studentapi.StudentApiTests]: StudentApiTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:12:57.323 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration kz.iitu.studentapi.StudentApiApplication for test class kz.iitu.studentapi.StudentApiTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-10-29T22:12:57.513+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] kz.iitu.studentapi.StudentApiTests       : Starting StudentApiTests using Java 21.0.12.1 with PID 36849 (started by jenkins in /var/lib/jenkins/workspace/Sarsembayev_Eldar_Student_API)
+2026-10-29T22:12:57.514+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] kz.iitu.studentapi.StudentApiTests       : The following 1 profile is active: "test"
+2026-10-29T22:12:57.900+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-29T22:12:57.920+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interface.
+2026-10-29T22:12:58.111+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-29T22:12:58.128+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-10-29T22:12:58.146+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-29T22:12:58.244+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-29T22:12:58.254+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-29T22:12:58.317+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:student_api user=SA
+2026-10-29T22:12:58.318+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-29T22:12:58.340+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-29T22:12:58.626+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-29T22:12:58.641+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-29T22:12:59.098+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-29T22:12:59.099+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-29T22:12:59.103+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-10-29T22:12:59.109+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 10 ms
+2026-10-29T22:12:59.141+05:00  INFO 36849 --- [sarsembayev-eldar-student-api] [    Test worker] kz.iitu.studentapi.StudentApiTests       : Started StudentApiTests in 1.762 seconds (process running for 2.235)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/var/lib/jenkins/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.8/f09415827a71be7ed621c7bd02550678f28bc81c/byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

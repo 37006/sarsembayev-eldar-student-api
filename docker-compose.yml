@@ -2,7 +2,7 @@ name: sarsembayev-eldar-student-api
 services:
   app:
     build: .
-    image: sarsembayev-eldar-student-api:${IMAGE_TAG:-v1.0.1-sarsembayev-eldar-37006}
+    image: sarsembayev-eldar-student-api:${IMAGE_TAG:-v1.0.2-sarsembayev-eldar-37006}
     container_name: sarsembayev-eldar-student-api-app
     restart: unless-stopped
     ports:

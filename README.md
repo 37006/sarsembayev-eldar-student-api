@@ -56,3 +56,13 @@ The CRUD feature includes automated checks for successful updates, missing IDs, 
 - `evidence/`: real command transcripts, API responses and Jenkins records.
 
 No separate PDF report or mandatory video is specified in this Midterm task. The code, GitHub history and actual demonstrations are the primary results.
+
+## Automatic CI verification
+
+The Jenkins job `Sarsembayev_Eldar_Student_API` checks GitHub once per minute using Poll SCM. After a commit reaches main, Jenkins checks out that revision and runs all five stages. The build cause distinguishes an SCM-triggered run from a manual Build Now run. The PostgreSQL smoke check also verifies case-insensitive email uniqueness and rollback when an update would reuse another student's email.
+
+## Reviewed release 1.0.2
+
+The full suite now contains 31 tests. The review fixed scalar-to-string conversion, empty values created by Unicode whitespace trimming, and misleading duplicate-email errors. Normalization now happens before validation. The live regression command is `python3 scripts/review_api_check.py`; it also checks concurrent uniqueness against PostgreSQL. These checks remain enabled when Python runs with `-O`.
+
+The main Jenkins job builds the release image. Other jobs use separate `ci-...-37006` tags so that a test branch cannot overwrite it. `scripts/api_demo_curl.sh` verifies every expected HTTP code, checks the updated data and cleans up its own student record. The supplied JAR in the submission archive is a build artifact; Docker Compose is the documented way to run it with PostgreSQL.

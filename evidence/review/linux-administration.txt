@@ -1,0 +1,259 @@
+Initial log size: 0
+.
+./.dockerignore
+./.env
+./.env.example
+./Dockerfile
+./Jenkinsfile
+./README.md
+./Start-Midterm.cmd
+./backups
+./backups/.gitkeep
+./backups/Sarsembayev_Eldar_README_backup.md
+./docker-compose.yml
+./docs
+./docs/API.md
+./docs/REPORT.md
+./docs/REPRODUCE.md
+./evidence
+./evidence/Sarsembayev_Eldar_log_analysis.txt
+./evidence/api-postgresql-final.txt
+./evidence/api-postgresql.txt
+./evidence/build-cache-seed.txt
+./evidence/container-management-persistence.txt
+./evidence/curl-crud.txt
+./evidence/docker-first-build.txt
+./evidence/docker-version-rebuild.txt
+./evidence/final-gradle-tests.txt
+./evidence/final-release-api.txt
+./evidence/final-release-audit.txt
+./evidence/final-release-backup.txt
+./evidence/final-release-containers.txt
+./evidence/final-release-git.txt
+./evidence/final-release-jenkins-console.txt
+./evidence/final-release-jenkins-result.json
+./evidence/final-release-jenkins-stages.json
+./evidence/final-release-regressions-before.txt
+./evidence/final-release-review-before.jsonl
+./evidence/final-release-review-tests.txt
+./evidence/final-release-verification.json
+./evidence/git-remote.txt
+./evidence/git-workflow.txt
+./evidence/gradle-tests.txt
+./evidence/initial-gradle-build.txt
+./evidence/jenkins-automatic-trigger-console.txt
+./evidence/jenkins-automatic-trigger-result.json
+./evidence/jenkins-automatic-trigger-stages.json
+./evidence/jenkins-controlled-failure-console.txt
+./evidence/jenkins-controlled-failure-result.json
+./evidence/jenkins-controlled-failure-stages.json
+./evidence/jenkins-controlled-fixed-console.txt
+./evidence/jenkins-controlled-fixed-result.json
+./evidence/jenkins-controlled-fixed-stages.json
+./evidence/jenkins-main-config.xml
+./evidence/jenkins-main-history.json
+./evidence/jenkins-main-initial-console.txt
+./evidence/jenkins-main-initial-result.json
+./evidence/jenkins-main-initial-stages.json
+./evidence/jenkins-main-polling.html
+./evidence/jenkins-test-results
+./evidence/jenkins-troubleshooting-config.xml
+./evidence/jenkins-troubleshooting-history.json
+./evidence/jenkins-troubleshooting-polling.html
+./evidence/linux-administration.txt
+./evidence/local-audit.txt
+./evidence/persistence-student.json
+./evidence/review
+./evidence/version-after-rebuild.json
+./evidence/version-rebuild-summary.txt
+./gradle
+./gradle.properties
+./gradle/wrapper
+./gradlew
+./gradlew.bat
+./logs
+./logs/.gitkeep
+./logs/Sarsembayev_Eldar_system_report.log
+./scripts
+./scripts/Sarsembayev_Eldar_system_report.sh
+./scripts/__pycache__
+./scripts/api_check.py
+./scripts/api_demo_curl.sh
+./scripts/configure_env.sh
+./scripts/linux_evidence.sh
+./scripts/review_api_check.py
+./scripts/start_linux.sh
+./scripts/wait_for_api.sh
+./settings.gradle
+./src
+./src/main
+./src/test
+Student: Eldar Sarsembayev
+Group: IT2-2301
+Student ID: 37006
+
+Date and time: 2026-10-29T22:35:07+05:00
+Username: eldar
+
+Operating system
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+
+Kernel
+Linux 6.18.54.1-microsoft-standard-WSL2 x86_64 GNU/Linux
+
+CPU
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           39 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  20
+On-line CPU(s) list:                     0-19
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Core(TM) i5-14600KF
+CPU family:                              6
+Model:                                   183
+Thread(s) per core:                      2
+Core(s) per socket:                      10
+Socket(s):                               1
+Stepping:                                1
+BogoMIPS:                                6988.80
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni vnmi umip waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize ibt flush_l1d arch_capabilities
+Virtualization:                          VT-x
+Hypervisor vendor:                       Microsoft
+Virtualization type:                     full
+L1d cache:                               480 KiB (10 instances)
+L1i cache:                               320 KiB (10 instances)
+L2 cache:                                20 MiB (10 instances)
+L3 cache:                                24 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0-19
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Ghostwrite:                Not affected
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Old microcode:             Not affected
+Vulnerability Reg file data sampling:    Mitigation; Clear Register File
+Vulnerability Retbleed:                  Mitigation; Enhanced IBRS
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
+
+Memory
+               total        used        free      shared  buff/cache   available
+Mem:           7.7Gi       2.1Gi       4.3Gi        20Mi       1.4Gi       5.6Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+Disk usage and available space
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.9G     0  3.9G   0% /usr/lib/modules/6.18.54.1-microsoft-standard-WSL2
+/dev/sdb         97M   97M     0 100% /usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2
+none            3.9G  4.0K  3.9G   1% /mnt/wsl
+drivers         476G  228G  249G  48% /usr/lib/wsl/drivers
+/dev/sdd       1007G  8.1G  948G   1% /
+none            3.9G   32K  3.9G   1% /mnt/wslg
+none            3.9G     0  3.9G   0% /usr/lib/wsl/lib
+rootfs          3.9G  3.4M  3.9G   1% /init
+none            3.9G  844K  3.9G   1% /run
+none            3.9G     0  3.9G   0% /run/lock
+none            3.9G     0  3.9G   0% /run/shm
+none            3.9G   80K  3.9G   1% /mnt/wslg/versions.txt
+none            3.9G   80K  3.9G   1% /mnt/wslg/doc
+C:\             476G  228G  249G  48% /mnt/c
+D:\             954G   98G  857G  11% /mnt/d
+tmpfs           786M   20K  786M   1% /run/user/1000
+tmpfs           786M   20K  786M   1% /run/user/0
+-rwxr-xr-x 1 eldar eldar 3283 Oct 29 22:35 backups/Sarsembayev_Eldar_README_backup.md
+-rwxr--r-- 1 eldar eldar  586 Oct 29 21:06 scripts/Sarsembayev_Eldar_system_report.sh
+PASS: README backup matches the source
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  22032 13324 ?        Ss   21:34   0:00 /sbin/init
+root           2  0.0  0.0   3804  2508 hvc0     Sl+  21:34   0:00 /init
+root           3  0.0  0.0   3664  2136 hvc0     S+   21:34   0:00 init-watcher
+root           8  0.0  0.0   3848  2444 hvc0     Sl+  21:34   0:00 plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --log-truncate
+root          51  0.0  0.2  50448 16732 ?        S<s  21:34   0:00 /usr/lib/systemd/systemd-journald
+root         103  0.0  0.0  24816  6488 ?        Ss   21:34   0:00 /usr/lib/systemd/systemd-udevd
+systemd+     119  0.0  0.1  21352 13212 ?        Ss   21:34   0:00 /usr/lib/systemd/systemd-resolved
+systemd+     123  0.0  0.0  91044  7992 ?        Ssl  21:34   0:00 /usr/lib/systemd/systemd-timesyncd
+root         177  0.0  0.0   4248  2680 ?        Ss   21:34   0:00 /usr/sbin/cron -f -P
+message+     178  0.0  0.0   9696  5504 ?        Ss   21:34   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+jenkins      181  1.0 10.2 11724584 824316 ?     Ssl  21:34   0:38 /usr/bin/java -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -jar /usr/share/java/jenkins.war --webroot=/var/cache/jenkins/war --httpPort=8080 --httpListenAddress=127.0.0.1
+root         186  0.0  0.1  18184  8904 ?        Ss   21:34   0:00 /usr/lib/systemd/systemd-logind
+root         230  0.0  0.0   3128  1968 tty1     Ss+  21:34   0:00 /sbin/agetty -o -p -- \u --noclear - linux
+syslog       231  0.0  0.0 222524  5740 ?        Ssl  21:34   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         233  0.0  0.2 107056 23260 ?        Ssl  21:34   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         243  0.3  0.8 2491376 67496 ?       Ssl  21:34   0:11 /usr/bin/containerd
+root         320  0.3  1.5 3426300 124572 ?      Ssl  21:34   0:12 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root         700  0.1  0.1 1268304 12708 ?       Sl   21:34   0:05 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 229672ddfdb14ed42314e7d962ee461d86d7b84c3c0c5b520287cff01f5a4415 -address /run/containerd/containerd.sock
+root         734  0.1  0.1 1268048 12756 ?       Sl   21:34   0:05 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 6db7a6b1d18a20fe8c06575205b53b8d14e542bd80745f12261ecdf6f22c6779 -address /run/containerd/containerd.sock
+10001        781  0.0  0.2 103740 23692 ?        Ss   21:34   0:00 python -m app.main
+70           795  0.0  0.3 175504 27552 ?        Ss   21:34   0:00 postgres
+root         846  0.0  0.0 1746912 5336 ?        Sl   21:34   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 127.0.0.1 -host-port 8082 -container-ip 172.17.0.2 -container-port 8080 -use-listen-fd
+70           941  0.0  0.0 175664  7732 ?        Ss   21:34   0:00 postgres: checkpointer 
+70           942  0.0  0.0 175600  6536 ?        Ss   21:34   0:00 postgres: background writer 
+70           944  0.0  0.1 175568  9484 ?        Ss   21:34   0:00 postgres: walwriter 
+70           945  0.0  0.0 177140  7916 ?        Ss   21:34   0:00 postgres: autovacuum launcher 
+70           946  0.0  0.0 177112  7208 ?        Ss   21:34   0:00 postgres: logical replication launcher 
+root        1036  0.0  0.0   3812  1416 ?        Ss   21:34   0:00 /init
+root        1037  0.0  0.0   3880  1484 ?        S    21:34   0:00 /init
+eldar       1038  0.0  0.0   3168  1880 pts/0    Ss+  21:34   0:00 tail -f /dev/null
+root        1039  0.0  0.0   6828  4652 pts/1    Ss   21:34   0:00 /bin/login -f
+eldar       1072  0.0  0.1  20440 11660 ?        Ss   21:34   0:00 /usr/lib/systemd/systemd --user
+eldar       1073  0.0  0.0  21180  3592 ?        S    21:34   0:00 (sd-pam)
+eldar       1095  0.0  0.0   6084  5324 pts/1    S+   21:34   0:00 -bash
+root        1306  0.0  0.0   6680  4472 pts/3    Ss   21:34   0:00 /bin/login -f
+root        1339  0.0  0.1  20448 11536 ?        Ss   21:34   0:00 /usr/lib/systemd/systemd --user
+root        1340  0.0  0.0  21188  3496 ?        S    21:34   0:00 (sd-pam)
+root        1361  0.0  0.0   5952  5284 pts/3    S+   21:34   0:00 -bash
+polkitd    11299  0.0  0.1 308188  8152 ?        Ssl  21:46   0:00 /usr/lib/polkit-1/polkitd --no-debug
+root       55036  0.0  0.0   3812  1424 ?        Ss   22:34   0:00 /init
+root       55038  0.0  0.0   3880  1492 ?        S    22:34   0:00 /init
+root       55040  0.0  0.0   4764  3424 pts/2    Ss+  22:34   0:00 bash /mnt/c/Users/gudvill/.codex/.chatgpt-projects/g-p-6abcd5256c048191adbf15c359c66ed3/midterm-work/review_verify.sh
+root       56130  0.0  0.1 1267448 10560 ?       Sl   22:35   0:00 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 6c6e79585eee52a0376146f307546692873c8219c17881cf019dfbe009ff446d -address /run/containerd/containerd.sock
+999        56154  250  5.0 10964880 407424 ?     Ssl  22:35   0:12 java -XX:MaxRAMPercentage=65.0 -jar /app/app.jar
+root       56219  0.2  0.0 1747168 5944 ?        Sl   22:35   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 127.0.0.1 -host-port 8083 -container-ip 172.18.0.2 -container-port 8080 -use-listen-fd
+70         56307  0.3  0.2 179004 17756 ?        Ss   22:35   0:00 postgres: student_api student_api 172.18.0.2(37250) idle
+70         56311  0.0  0.1 177844 15392 ?        Ss   22:35   0:00 postgres: student_api student_api 172.18.0.2(37252) idle
+70         56312  0.0  0.1 177844 14832 ?        Ss   22:35   0:00 postgres: student_api student_api 172.18.0.2(37260) idle
+70         56313  0.0  0.1 177844 15132 ?        Ss   22:35   0:00 postgres: student_api student_api 172.18.0.2(37262) idle
+70         56314  0.0  0.1 177636 12464 ?        Ss   22:35   0:00 postgres: student_api student_api 172.18.0.2(37274) idle
+70         56318  0.0  0.1 177636 12460 ?        Ss   22:35   0:00 postgres: student_api student_api 172.18.0.2(37276) idle
+70         56339  0.0  0.1 177636 12460 ?        Ss   22:35   0:00 postgres: student_api student_api 172.18.0.2(37280) idle
+70         56340  0.0  0.1 177636 12464 ?        Ss   22:35   0:00 postgres: student_api student_api 172.18.0.2(37282) idle
+70         56341  0.0  0.1 177636 12460 ?        Ss   22:35   0:00 postgres: student_api student_api 172.18.0.2(37294) idle
+70         56342  0.0  0.1 177636 12464 ?        Ss   22:35   0:00 postgres: student_api student_api 172.18.0.2(37310) idle
+root       56409  0.0  0.0   6804  4016 pts/2    S+   22:35   0:00 runuser -u eldar -- bash scripts/linux_evidence.sh
+eldar      56410  0.0  0.0   4764  3492 pts/2    S+   22:35   0:00 bash scripts/linux_evidence.sh
+eldar      56433  0.0  0.0   9816  5076 pts/2    R+   22:35   0:00 ps aux
+
+Java processes, if present
+181 /usr/bin/java -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -jar /usr/share/java/jenkins.war --webroot=/var/cache/jenkins/war --httpPort=8080 --httpListenAddress=127.0.0.1
+56154 java -XX:MaxRAMPercentage=65.0 -jar /app/app.jar
+none            3.9G   80K  3.9G   1% /mnt/wslg/doc
+C:\             476G  228G  249G  48% /mnt/c
+D:\             954G   98G  857G  11% /mnt/d
+tmpfs           786M   20K  786M   1% /run/user/1000
+tmpfs           786M   20K  786M   1% /run/user/0
+Student: Eldar Sarsembayev
+
+Redirection: > replaces a file; >> appends to a file.

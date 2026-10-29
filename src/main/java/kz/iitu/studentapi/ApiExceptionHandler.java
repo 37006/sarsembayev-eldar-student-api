@@ -8,6 +8,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
+import org.hibernate.exception.ConstraintViolationException;
 
 @RestControllerAdvice
 public class ApiExceptionHandler {
@@ -17,7 +18,17 @@ public class ApiExceptionHandler {
     }
     @ExceptionHandler(DataIntegrityViolationException.class)
     ResponseEntity<ProblemDetail> duplicate(DataIntegrityViolationException exception) {
-        return problem(HttpStatus.CONFLICT, "A student with this email already exists");
+        for (Throwable cause = exception; cause != null; cause = cause.getCause()) {
+            if (cause instanceof ConstraintViolationException constraint
+                    && "23505".equals(constraint.getSQLState())
+                    && constraint.getConstraintName() != null
+                    && constraint.getConstraintName().toLowerCase(java.util.Locale.ROOT).contains("uk_students_email")) {
+                return problem(HttpStatus.CONFLICT, "A student with this email already exists");
+            }
+        }
+        org.slf4j.LoggerFactory.getLogger(ApiExceptionHandler.class)
+            .error("Unexpected database integrity error while saving a student", exception);
+        return problem(HttpStatus.INTERNAL_SERVER_ERROR, "The student could not be saved");
     }
     @ExceptionHandler(MethodArgumentNotValidException.class)
     ResponseEntity<ProblemDetail> validation(MethodArgumentNotValidException exception) {
@@ -29,7 +40,7 @@ public class ApiExceptionHandler {
     }
     @ExceptionHandler({HttpMessageNotReadableException.class, MethodArgumentTypeMismatchException.class})
     ResponseEntity<ProblemDetail> malformed(Exception exception) {
-        return problem(HttpStatus.BAD_REQUEST, "The request contains malformed JSON or an invalid student ID");
+        return problem(HttpStatus.BAD_REQUEST, "The request contains malformed JSON, an invalid field type or an invalid student ID");
     }
     private ResponseEntity<ProblemDetail> problem(HttpStatus status, String message) {
         return ResponseEntity.status(status).body(ProblemDetail.forStatusAndDetail(status, message));

@@ -1,5 +1,6 @@
 .gradle/
 build/
+release/
 .env
 .env.*
 !.env.example
@@ -14,3 +15,6 @@ backups/*
 *.iml
 .vscode/
 __pycache__/
+
+# Final release verification is packaged separately from its triggering commit.
+evidence/final-release-*
