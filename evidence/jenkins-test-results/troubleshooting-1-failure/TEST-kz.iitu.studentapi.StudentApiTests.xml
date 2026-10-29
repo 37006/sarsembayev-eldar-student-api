@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kz.iitu.studentapi.StudentApiTests" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-10-29T17:09:51.764Z" hostname="SystemX" time="0.241">
+  <properties/>
+  <testcase name="unknownStudentReturns404()" classname="kz.iitu.studentapi.StudentApiTests" time="0.058"/>
+  <testcase name="invalidUpdateReturns400()" classname="kz.iitu.studentapi.StudentApiTests" time="0.038"/>
+  <testcase name="updateMissingReturns404()" classname="kz.iitu.studentapi.StudentApiTests" time="0.006"/>
+  <testcase name="missingFieldsReturn400()" classname="kz.iitu.studentapi.StudentApiTests" time="0.004"/>
+  <testcase name="blankNameReturns400()" classname="kz.iitu.studentapi.StudentApiTests" time="0.004"/>
+  <testcase name="emptyListIsValid()" classname="kz.iitu.studentapi.StudentApiTests" time="0.052"/>
+  <testcase name="createsStudentAndLocation()" classname="kz.iitu.studentapi.StudentApiTests" time="0.006"/>
+  <testcase name="oversizedNameReturns400()" classname="kz.iitu.studentapi.StudentApiTests" time="0.005"/>
+  <testcase name="normalizesEmailCase()" classname="kz.iitu.studentapi.StudentApiTests" time="0.005"/>
+  <testcase name="malformedJsonReturns400()" classname="kz.iitu.studentapi.StudentApiTests" time="0.003"/>
+  <testcase name="invalidEmailReturns400()" classname="kz.iitu.studentapi.StudentApiTests" time="0.003"/>
+  <testcase name="deleteMissingReturns404()" classname="kz.iitu.studentapi.StudentApiTests" time="0.005"/>
+  <testcase name="deletesExistingStudent()" classname="kz.iitu.studentapi.StudentApiTests" time="0.009"/>
+  <testcase name="updatesExistingStudent()" classname="kz.iitu.studentapi.StudentApiTests" time="0.011"/>
+  <testcase name="displaysStudentIdentity()" classname="kz.iitu.studentapi.StudentApiTests" time="0.004"/>
+  <testcase name="invalidIdReturns400()" classname="kz.iitu.studentapi.StudentApiTests" time="0.004"/>
+  <testcase name="healthEndpointWorks()" classname="kz.iitu.studentapi.StudentApiTests" time="0.012"/>
+  <system-out><![CDATA[2026-10-29T22:09:51.760+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [kz.iitu.studentapi.StudentApiTests]: StudentApiTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-29T22:09:51.763+05:00  INFO 32806 --- [sarsembayev-eldar-student-api] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration kz.iitu.studentapi.StudentApiApplication for test class kz.iitu.studentapi.StudentApiTests
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

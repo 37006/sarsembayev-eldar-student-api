@@ -1,0 +1,104 @@
+{
+  "_links": {
+    "self": {
+      "href": "/job/Sarsembayev_Eldar_Student_API/1/wfapi/describe"
+    },
+    "artifacts": {
+      "href": "/job/Sarsembayev_Eldar_Student_API/1/wfapi/artifacts"
+    }
+  },
+  "id": "1",
+  "name": "#1",
+  "status": "SUCCESS",
+  "startTimeMillis": 1793293715950,
+  "endTimeMillis": 1793293758380,
+  "durationMillis": 42430,
+  "queueDurationMillis": 4,
+  "pauseDurationMillis": 0,
+  "stages": [
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Sarsembayev_Eldar_Student_API/1/execution/node/10/wfapi/describe"
+        }
+      },
+      "id": "10",
+      "name": "Checkout",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793293720128,
+      "durationMillis": 11178,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Sarsembayev_Eldar_Student_API/1/execution/node/16/wfapi/describe"
+        }
+      },
+      "id": "16",
+      "name": "Build",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793293731325,
+      "durationMillis": 5620,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Sarsembayev_Eldar_Student_API/1/execution/node/21/wfapi/describe"
+        }
+      },
+      "id": "21",
+      "name": "Test",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793293736957,
+      "durationMillis": 6610,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Sarsembayev_Eldar_Student_API/1/execution/node/27/wfapi/describe"
+        }
+      },
+      "id": "27",
+      "name": "Docker Build",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793293743584,
+      "durationMillis": 14375,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Sarsembayev_Eldar_Student_API/1/execution/node/32/wfapi/describe"
+        }
+      },
+      "id": "32",
+      "name": "Verify",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793293757971,
+      "durationMillis": 285,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Sarsembayev_Eldar_Student_API/1/execution/node/37/wfapi/describe"
+        }
+      },
+      "id": "37",
+      "name": "Declarative: Post Actions",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793293758269,
+      "durationMillis": 33,
+      "pauseDurationMillis": 0
+    }
+  ]
+}

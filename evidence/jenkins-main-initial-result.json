@@ -1,0 +1,80 @@
+{
+  "number": 1,
+  "result": "SUCCESS",
+  "duration": 42430,
+  "timestamp": 1793293715946,
+  "url": "http://127.0.0.1:8080/job/Sarsembayev_Eldar_Student_API/1/",
+  "actions": [
+    {
+      "_class": "hudson.model.CauseAction",
+      "causes": [
+        {
+          "_class": "hudson.model.Cause$UserIdCause",
+          "shortDescription": "Started by user Eldar Sarsembayev",
+          "userId": "admin",
+          "userName": "Eldar Sarsembayev"
+        }
+      ]
+    },
+    {
+      "_class": "org.jenkinsci.plugins.workflow.libs.LibrariesAction"
+    },
+    {},
+    {
+      "_class": "hudson.plugins.git.util.BuildData",
+      "buildsByBranchName": {
+        "refs/remotes/origin/main": {
+          "_class": "hudson.plugins.git.util.Build",
+          "buildNumber": 1,
+          "buildResult": null,
+          "marked": {
+            "SHA1": "3c05874d58dd196bad9c215c27258daf0d7514db",
+            "branch": [
+              {
+                "SHA1": "3c05874d58dd196bad9c215c27258daf0d7514db",
+                "name": "refs/remotes/origin/main"
+              }
+            ]
+          },
+          "revision": {
+            "SHA1": "3c05874d58dd196bad9c215c27258daf0d7514db",
+            "branch": [
+              {
+                "SHA1": "3c05874d58dd196bad9c215c27258daf0d7514db",
+                "name": "refs/remotes/origin/main"
+              }
+            ]
+          }
+        }
+      },
+      "lastBuiltRevision": {
+        "SHA1": "3c05874d58dd196bad9c215c27258daf0d7514db",
+        "branch": [
+          {
+            "SHA1": "3c05874d58dd196bad9c215c27258daf0d7514db",
+            "name": "refs/remotes/origin/main"
+          }
+        ]
+      },
+      "remoteUrls": [
+        "https://github.com/37006/sarsembayev-eldar-student-api.git"
+      ],
+      "scmName": ""
+    },
+    {},
+    {},
+    {},
+    {
+      "_class": "org.jenkinsci.plugins.displayurlapi.actions.RunDisplayAction"
+    },
+    {
+      "_class": "org.jenkinsci.plugins.pipeline.modeldefinition.actions.RestartDeclarativePipelineAction"
+    },
+    {},
+    {
+      "_class": "org.jenkinsci.plugins.workflow.job.views.FlowGraphAction"
+    },
+    {},
+    {}
+  ]
+}

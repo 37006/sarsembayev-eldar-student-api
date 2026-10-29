@@ -1,0 +1,96 @@
+{
+  "_class": "org.jenkinsci.plugins.workflow.job.WorkflowJob",
+  "name": "Sarsembayev_Eldar_Student_API_Troubleshooting",
+  "builds": [
+    {
+      "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+      "actions": [
+        {
+          "_class": "hudson.model.CauseAction",
+          "causes": [
+            {
+              "_class": "hudson.triggers.SCMTrigger$SCMTriggerCause",
+              "shortDescription": "Started by an SCM change"
+            },
+            {
+              "_class": "hudson.model.Cause$UserIdCause",
+              "shortDescription": "Started by user Eldar Sarsembayev",
+              "userId": "admin",
+              "userName": "Eldar Sarsembayev"
+            }
+          ]
+        },
+        {},
+        {
+          "_class": "org.jenkinsci.plugins.workflow.libs.LibrariesAction"
+        },
+        {},
+        {
+          "_class": "hudson.plugins.git.util.BuildData"
+        },
+        {},
+        {},
+        {},
+        {
+          "_class": "org.jenkinsci.plugins.displayurlapi.actions.RunDisplayAction"
+        },
+        {
+          "_class": "org.jenkinsci.plugins.pipeline.modeldefinition.actions.RestartDeclarativePipelineAction"
+        },
+        {},
+        {
+          "_class": "org.jenkinsci.plugins.workflow.job.views.FlowGraphAction"
+        },
+        {},
+        {}
+      ],
+      "building": false,
+      "number": 2,
+      "result": "SUCCESS",
+      "timestamp": 1793293831285
+    },
+    {
+      "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+      "actions": [
+        {
+          "_class": "hudson.model.CauseAction",
+          "causes": [
+            {
+              "_class": "hudson.model.Cause$UserIdCause",
+              "shortDescription": "Started by user Eldar Sarsembayev",
+              "userId": "admin",
+              "userName": "Eldar Sarsembayev"
+            }
+          ]
+        },
+        {
+          "_class": "org.jenkinsci.plugins.workflow.libs.LibrariesAction"
+        },
+        {},
+        {
+          "_class": "hudson.plugins.git.util.BuildData"
+        },
+        {},
+        {},
+        {},
+        {
+          "_class": "org.jenkinsci.plugins.displayurlapi.actions.RunDisplayAction"
+        },
+        {
+          "_class": "org.jenkinsci.plugins.pipeline.modeldefinition.actions.RestartDeclarativePipelineAction"
+        },
+        {},
+        {
+          "_class": "org.jenkinsci.plugins.workflow.job.views.FlowGraphAction"
+        },
+        {},
+        {}
+      ],
+      "building": false,
+      "number": 1,
+      "result": "FAILURE",
+      "timestamp": 1793293769712
+    }
+  ],
+  "nextBuildNumber": 3
+}

@@ -1,0 +1,116 @@
+{
+  "_links": {
+    "self": {
+      "href": "/job/Sarsembayev_Eldar_Student_API_Troubleshooting/1/wfapi/describe"
+    },
+    "artifacts": {
+      "href": "/job/Sarsembayev_Eldar_Student_API_Troubleshooting/1/wfapi/artifacts"
+    }
+  },
+  "id": "1",
+  "name": "#1",
+  "status": "FAILED",
+  "startTimeMillis": 1793293769718,
+  "endTimeMillis": 1793293792693,
+  "durationMillis": 22975,
+  "queueDurationMillis": 6,
+  "pauseDurationMillis": 0,
+  "stages": [
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Sarsembayev_Eldar_Student_API_Troubleshooting/1/execution/node/10/wfapi/describe"
+        }
+      },
+      "id": "10",
+      "name": "Checkout",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793293771046,
+      "durationMillis": 6999,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Sarsembayev_Eldar_Student_API_Troubleshooting/1/execution/node/16/wfapi/describe"
+        }
+      },
+      "id": "16",
+      "name": "Build",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793293778056,
+      "durationMillis": 4620,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Sarsembayev_Eldar_Student_API_Troubleshooting/1/execution/node/21/wfapi/describe"
+        }
+      },
+      "id": "21",
+      "name": "Test",
+      "execNode": "",
+      "status": "FAILED",
+      "error": {
+        "message": "script returned exit code 1",
+        "type": "hudson.AbortException"
+      },
+      "startTimeMillis": 1793293782690,
+      "durationMillis": 9798,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Sarsembayev_Eldar_Student_API_Troubleshooting/1/execution/node/27/wfapi/describe"
+        }
+      },
+      "id": "27",
+      "name": "Docker Build",
+      "execNode": "",
+      "status": "FAILED",
+      "error": {
+        "message": "script returned exit code 1",
+        "type": "hudson.AbortException"
+      },
+      "startTimeMillis": 1793293792503,
+      "durationMillis": 37,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Sarsembayev_Eldar_Student_API_Troubleshooting/1/execution/node/32/wfapi/describe"
+        }
+      },
+      "id": "32",
+      "name": "Verify",
+      "execNode": "",
+      "status": "FAILED",
+      "error": {
+        "message": "script returned exit code 1",
+        "type": "hudson.AbortException"
+      },
+      "startTimeMillis": 1793293792554,
+      "durationMillis": 26,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Sarsembayev_Eldar_Student_API_Troubleshooting/1/execution/node/37/wfapi/describe"
+        }
+      },
+      "id": "37",
+      "name": "Declarative: Post Actions",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793293792595,
+      "durationMillis": 29,
+      "pauseDurationMillis": 0
+    }
+  ]
+}

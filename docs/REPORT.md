@@ -2,7 +2,7 @@
 
 Eldar Sarsembayev | IT2-2301 | Student ID 37006
 
-Work in progress: Linux, the local Git workflow, Docker and PostgreSQL checks are complete. GitHub publication and Jenkins execution still require access confirmation. Jenkins rows below describe the prepared configuration until real build results are recorded.
+All required local and Jenkins demonstrations have recorded results.
 
 ## Application and environment
 
@@ -23,15 +23,15 @@ The project is separate from my previous Python laboratory. The local environmen
 | 2.1 | Initialized main, configured Git identity, added .gitignore and made the required personalized initial commit | `git-workflow.txt` |
 | 2.2 | Added PUT on the personal CRUD branch, updated README and made two meaningful feature commits before merging | `git-workflow.txt`, Git history |
 | 2.3 | Changed the same README line on main and the documentation branch; resolved the actual conflict by editing the combined status | `git-workflow.txt` includes conflict markers and resolution |
-| 2.4 | Personal repository, remote branches and release tags; `.env` excluded throughout history | `git-remote.txt` when published; `local-audit.txt` |
+| 2.4 | Personal public repository, remote branches and release tags; `.env` excluded throughout history | `git-remote.txt`, `final-release-git.txt`, `local-audit.txt` |
 | 3.1 | Multi-stage official JDK/Java runtime build using the Gradle wrapper, non-root runtime, port 8080 and individual image tags | `docker-first-build.txt`, `version-rebuild-summary.txt` |
 | 3.2 | Application and PostgreSQL services, environment settings, named volume, dedicated network and database health check; JDBC uses db, not localhost | `docker-first-build.txt`, `version-rebuild-summary.txt` |
 | 3.3 | Listed containers, read logs, inspected selected config, ran commands in the app, stopped/started it, restarted both services, recreated containers, and rebuilt version 1.0.0 as 1.0.1 | `container-management-persistence.txt`, `docker-version-rebuild.txt` |
 | 3.4 | Demonstrated create/list/get/update/delete and a nonexistent ID using curl and individual student data | `curl-crud.txt`; additional error checks in `api-postgresql-final.txt` |
 | 4.1 | Required job and GitHub SCM checkout on a Java 21/Docker-capable Linux agent | Jenkins initial console and job configuration |
 | 4.2 | Checkout, Build, Test, Docker Build and Verify; personal identity and image printed; failed commands stop later stages | `Jenkinsfile`, Jenkins console and stage records |
-| 4.3 | Successful baseline, isolated failing test expectation, correction and successful rerun | Not yet executed; Not yet executed; Not yet executed |
-| 4.4 | SCM polling, a new GitHub commit and an automatically triggered successful build | Not yet executed; polling/build cause records |
+| 4.3 | Successful baseline, isolated failing test expectation, correction and successful rerun | Build #1: SUCCESS; Build #1: FAILURE; Build #2: SUCCESS |
+| 4.4 | SCM polling, a new GitHub commit and an automatically triggered successful build | Build #2: SUCCESS; polling/build cause records |
 
 Evidence filenames in the table are relative to `evidence/`. The final status of external tasks must be checked against the actual remote and Jenkins records, not inferred from the presence of configuration files.
 
@@ -48,6 +48,10 @@ The first image is tagged `v1.0-sarsembayev-eldar-37006`. After changing the Gra
 The README conflict occurred because the documentation branch and main changed the same project-status line from their common ancestor. I retained both meanings in the resolved line: CRUD was implemented and API usage documented. The resolution is a merge commit with both parent branches.
 
 The controlled CI error belongs only to `test/sarsembayev-eldar-pipeline`. It changes the expected response to an invalid email from 400 to 201. The application correctly returns 400, so the deliberately incorrect test fails. Correcting the expectation to 400 fixes the test. The main application does not need to be broken to demonstrate Pipeline failure.
+
+The main branch has 17 automated tests. The isolated troubleshooting branch adds one test: its first run completed 18 tests with one deliberately failing assertion, and the corrected run completed successfully. The failed console explicitly records that Docker Build and Verify were skipped. The archived XML files are included under `evidence/jenkins-test-results/`.
+
+The automatically triggered main build was started by `hudson.triggers.SCMTrigger$SCMTriggerCause`. Its saved result identifies the checked-out Git revision, and its console finishes with SUCCESS. This verifies the configured polling trigger through an actual GitHub change rather than a manual Build Now request.
 
 ## Credentials and service access
 
@@ -71,7 +75,7 @@ Submit the personal GitHub repository URL and the final project archive containi
 
 Repository: https://github.com/37006/sarsembayev-eldar-student-api
 
-Source revision when this report was generated: `ae10b6d3283418e6e172c4ab6880934e8a9eee4d`. A later documentation-only commit may contain this report and the evidence itself.
+Source revision when this report was generated: `e7282347d411b0cda530193e986b057eb7ddf7dc`. A later documentation-only commit may contain this report and the evidence itself.
 
 ## References
 
