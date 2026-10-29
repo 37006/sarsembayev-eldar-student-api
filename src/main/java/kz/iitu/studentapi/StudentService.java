@@ -17,5 +17,11 @@ public class StudentService {
     @Transactional
     public Student create(StudentRequest request) { return repository.saveAndFlush(new Student(request)); }
     @Transactional
+    public Student update(long id, StudentRequest request) {
+        Student student = findById(id);
+        student.apply(request);
+        return repository.saveAndFlush(student);
+    }
+    @Transactional
     public void delete(long id) { repository.delete(findById(id)); }
 }
