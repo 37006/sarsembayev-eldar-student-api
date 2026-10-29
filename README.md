@@ -41,3 +41,7 @@ The Gradle tests use an isolated H2 database in PostgreSQL compatibility mode. T
 ## CI and deployment
 
 Continuous Integration checks each change by building and testing it. Continuous Delivery keeps a verified version ready for an approved release. Continuous Deployment releases successful changes automatically. This Midterm pipeline performs CI and image verification; automated deployment is not required.
+
+## CRUD feature by Eldar Sarsembayev
+
+I added PUT updates for existing students. A missing student returns 404, invalid fields return 400, and an email already used by another student returns 409.

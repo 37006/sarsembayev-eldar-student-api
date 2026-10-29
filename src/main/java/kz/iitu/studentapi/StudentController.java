@@ -21,6 +21,10 @@ public class StudentController {
         Student student = service.create(request);
         return ResponseEntity.created(URI.create(BASE_PATH + "/" + student.getId())).body(student);
     }
+    @PutMapping("/{id}")
+    public Student update(@PathVariable long id, @Valid @RequestBody StudentRequest request) {
+        return service.update(id, request);
+    }
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable long id) {
         service.delete(id);
